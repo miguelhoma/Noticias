@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Empieza Style de la pagina de la categoria por Harsh */
+
+body.categoryTemplate{
+    background-color: aliceblue;
+}
+
+.mainCategory{
+    background-color: white;
+}
+
+.nameCategory{
+    font-size: x-large;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    background-color: aqua;
+}
+
+
+/* Acaba Style de la pagina de la categoria por Harsh*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
