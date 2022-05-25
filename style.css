@@ -4,25 +4,35 @@
 
 /* Empieza Style de la pagina de la categoria por Harsh */
 
-body.categoryTemplate{
+.categoryTemplate{
     background-color: aliceblue;
 }
 
 .mainCategory{
-    background-color: white;
-}
+    background-color: bisque;
 
+}
 .nameCategory{
-    font-size: x-large;
+    font-size: large;
+    text-align: center;
 }
 
-section{
+section.containerNoticias{
+    height: 100%;
+    background-color: palegoldenrod;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
-}
+    align-items: center;
+    align-content: space-between;
+} 
 
-article{
+main.categoryTemplate, article{
+
     background-color: aqua;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
 }
 
 
