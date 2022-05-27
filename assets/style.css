@@ -1,6 +1,163 @@
-*{
-    box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
+
+/* Barra de navegación Matias */
+
+header {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Parte de la imagen superior de todonoticias.net */
+
+.menuContainer {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------- imagen del logo grande arriba ----------------*/
+.menuContainer .imagenLogo{
+    justify-content: center;
+    margin: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width:70%;
+}
+
+/* esto es el menu hamburguesa que se encuentra oculto*/
+#btnMenu {
+    display: none;
+    float: right;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background-color: rgba(71, 71, 71, 0.3); /*le da el color al menu hamburguesa*/
+    border: 1px solid black;
+}
+
+/* parta de la barra de navegacion de los links con las noticias */
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu li:hover {
+    background-color: rgba(122, 122, 122, 0.3); /*le da el color al menu al pasar el mouse*/
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: red;
+    text-decoration: none;
+}
+
+/*---------------- responsive menú de navegación ----------------*/
+@media (max-width: 768px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: rgb(0, 0, 0);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #ffffff;
+    }
+
+    #btnMenu:checked ~ .menu {
+        margin: 0;
+    }
+    .menu li:hover { 
+        background-color: rgba(119, 119, 119, 0.363);/*le da el color al menu hamburgesa al pasar el mouse*/
+    }
+}
+
+/*---------------- Footer ----------------*/
+/*cotenido del footer*/
+.footer {
+    background-color: rgb(0, 0, 0);
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*contido donde esta el logo del mundo*/
+.logoMundo {
+    background-color: rgb(48, 48, 48); /*va en color negro*/
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*logo del mundo*/
+.imgMundo {
+    width: 50px;
+    height: 50px;
+}
+/*contido donde estan las redes sociales*/
+.redesSociales {
+    background-color: rgb(48, 48, 48); /*va en color negro*/
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*contido donde esta el copyright*/
+.copyRight {
+    background-color: rgb(48, 48, 48); /*va en color negro*/
+    color: white;
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*---------------- responsive footer ----------------*/
+
+@media (max-width: 768px) {
+    .logoMundo, .redesSociales, .copyRight {
+        width: 100%;
+        margin: 2%;
+        height: 60px;
+    }
+}
+
 
 /* Empieza Style de la pagina de la categoria por Harsh */
 
