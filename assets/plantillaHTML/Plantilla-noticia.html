@@ -4,31 +4,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoNoticias.net</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
-            <!--AQUI ESTA LA CABECERA-->
-<header>
-     <!--aqui va ir el icono de menu-->
-    <nav class="logotipo">
-        <div class="imagenLogotipo">
-            <img src="/source/img/todo noticias1.png" alt="Logo">
+
+<!--AQUI ESTA LA CABECERA-->
+
+<body>
+    
+    <header>
+        <div class="menuContainer">
+            <img class="imagenLogo" src="/assets/img/todo noticias1.png" alt="">
         </div>
-        <div class="listaLinks">
-            <ul class="listaLinksUl">
-                <li>
-                    <a href="https://www.google.com">Deportes</a>
-                    <a href="https://www.google.com">Salud</a>
-                    <a href="https://www.google.com">Entretenimiento</a>
-                    <a href="https://www.google.com">Actualidad</a>
-                    <a href="https://www.google.com">Política</a>
-                    <a href="https://www.google.com">Cutura</a>
-                    <a href="https://www.google.com">Economía</a>
-                    <a href="https://www.google.com">Tecnologia</a>
-                </li>
+        <input type="checkbox" id="btnMenu">
+        <label for="btnMenu"><img src="/assets/menu.svg" alt=""></label>
+        <nav class="menu">
+            <ul>
+                <li ><a href="#" >Deportes</a></li>
+                <li ><a href="#" >Salud</a></li>
+                <li ><a href="#" >Entretenimiento</a></li>
+                <li ><a href="#" >Actualidad</a></li>
+                <li ><a href="#" >Cultura</a></li>
+                <li ><a href="#" >Política</a></li>
+                <li ><a href="#" >Economía</a></li>
+                <li ><a href="#" >Tecnología</a></li>
+                <li ><a href="#" >Ciencia</a></li>
+                <li ><a href="#" >País</a></li>
+                <li ><a href="#" >Sociedad</a></li>
+                <li ><a href="#" >Lectura</a></li>
+                <li ><a href="#" >Turismo</a></li>
+                <li ><a href="#" >Gourmet</a></li>
+                <li ><a href="#" >Educacion</a></li>
+                <li ><a href="#" >Clima</a></li>
             </ul>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
     <section id="new-feed" class="container">
         <div class="new-block">
@@ -83,20 +92,20 @@
 
         <!-- EL PIE -->
 
-    <footer>
-        <div class="contenidoFooter">
-            <div class="footerLogo">
-                <img src="" alt="">
+        <footer>
+            <div class="footer">
+                <div class="logoMundo">
+                    <a href="index.html"><img class="imgMundo" src="/assets/img/mundo.png" alt=""></a>
+                </div>
+                <div class="redesSociales">
+                    <img class="imgFacebook" src="/assets/img/logoFacebook.png" alt="">
+                    <img class="imgInstagram" src="/assets/img/logoInstagram.png" alt="">
+                    <img class="imgTwitter" src="/assets/img/logoTwitter.png" alt="">
+                </div>
+                <div class="copyRight">
+                    copyright | todos los derechos reservados
+                </div>
             </div>
-            <div class="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div>
-            <div class="copyright">
-                <p>The  Recipes Theme (copyright) 2022 | All Rights Reserved</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>
