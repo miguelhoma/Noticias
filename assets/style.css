@@ -236,9 +236,79 @@ main.categoryTemplate, .newsSubtitle{
 }
 /* Acaba Style de la pagina de la categoria por Harsh*/
 
+/* Empieza Style del index por Miguel*/
 
+.mainIndex {
+    background:white;
+}
 
+.firstnews {
+    margin: 15px;
+    display: flex;
+}
 
+.outstanding_one {
+    width:
+    padding: 10px;
+    display: flex;
+}
+
+.img_one {
+    float: left;
+    display: flex;
+}
+
+.box_one {
+    display: flex;
+}
+
+.outstanding_two {
+    padding: 10px;
+    display: flex;
+}
+
+.img_two {
+    display: flex;
+}
+
+.outstanding_three {
+    display: flex;
+}
+
+.img_three {
+    float: left;
+
+}
+
+.box_two {
+    display: flex;
+}
+
+.outstanding_four {
+    display: flex;
+}
+
+.img_four{
+    display: flex;
+}
+
+.outstanding_five {
+    display: flex;
+}
+
+.img_five {
+    display: flex;
+}
+
+.outstanding_six {
+    display: flex;
+}
+
+.img_six {
+    display: flex;
+}
+
+/*Acaba Style del index por Miguel*/
 
 
 
