@@ -244,23 +244,29 @@ main.categoryTemplate, .newsSubtitle{
 }
 
 .firstnews {
-    padding: 15px;
     display: flex;
 }
 
 .outstanding_one {
-    width: 15px;
-    padding: 10px;
+    
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .img_one {
-    float: left;
+    display: flex;
+}
+
+.text_one {
     display: flex;
 }
 
 .box_one {
+    
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .outstanding_two {
