@@ -3,7 +3,7 @@ const noticias = [
       "fecha": "23/05/2022",
       "autor": "Zito",
       "titulo": "La renovación de Mbappé en PSG y el efecto en redes sociales: perdió miles de seguidores",
-      "subtitulo": "El jugador del momento, que el fin de semana anunció su continuidad en el París Saint-Germain, perdió más de 700.000 seguidores en las últimas horas. ¿Hinchas del Madrid decepcionados?",
+      "subtitulo": "El jugador del momento, que el fin de semana anunció su continuidad en el París Saint-Germain, perdió más de 700.000 seguidores en las últimas horas.",
       "noticiap1": "La extensa novela sobre el futuro de Kylian Mbappé llegó a su final el pasado fin de semana. El delantero del Paris Saint-Germain finalmente optó por la renovación en el PSG y rechazó la oferta del Real Madrid, tras una disputa de varios meses entre el club francés y el español. Y la decisión tuvo para la figura francesa una consecuencia inesperada en sus redes sociales.",
       "noticiap2": "Mbappé, uno de los jugadores con más alcance en el mundo de las redes sociales perdió entre 600.000 y 700.000 seguidores en su cuenta de Instagram desde que se dio a conocer la noticia de su continuidad en el PSG. Claro que los followers de Mbappé se siguen contando de a millones, pero no dejó de llamar la atención el número de fanáticos -probablemente del Real Madrid- que no quisieron tener más noticias de él.",
       "noticiap3": "Sin tener un número exacto, eran más de 71.600.000 los que Mbappé tenía hasta este fin de semana, pero ya avanzado el lunes en Europa, la cuenta de Instagram del francés tiene ahora mismo menos de 71 millones: el número exacto es 70.992.835.",
