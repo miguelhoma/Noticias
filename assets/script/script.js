@@ -90,6 +90,5 @@ function categoryTechnology(){
 
 
 categoriaDeporte();
-categoryPolitica();
 categoryEconomy();
-
+categoryPolitica();
