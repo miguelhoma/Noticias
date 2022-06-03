@@ -15,37 +15,8 @@ function categoriaDeporte(){
 }
 
 
-/*  Proceso mental de Harsh para descrubrir el loop para obtener categorías
 
-    newsTitle[nA]         noticias_json[nA]
-    newsSubtitle[nA]      noticias_json[nA] 
-    newsImg[nA]           noticias_json[nA]  
 
-*/
-
-// function para categoría de actualidad, en prueba con economía
-// function categoriaActualidad(){
-
-//     let nA = -1; 
-
-//     while(nA < 6){
-
-//         nA ++;
-//         let nB = 7;
-
-//             while ( nB < 14) {   
-
-//             document.getElementsByClassName("newsTitle Act")[nA].innerHTML = noticias_json[nB]["titulo"];
-//             document.getElementsByClassName("newsSubtitle Act")[nA].innerHTML = noticias_json[nB]["subtitulo"];
-//             document.getElementsByClassName("newsImg Act")[nA].src = noticias_json[nB]["imagenUrl"];
-//             document.getElementsByClassName("tit Act")[0].innerHTML = noticias_json[7]["categoria"];
-//             nB++;
-            
-//             }
-    
-//     }
-
-// }
 function categoryEconomy(){
 
     for (let nC = 0, nB = 7; nC < 7 & nB < 14; nC++, nB++){
@@ -63,32 +34,13 @@ function categoryEconomy(){
 
 function categoryPolitica(){
 
-    for (let aC = 0, aB = 21; aC < 7 & aB < 28; aC++, aB++){
-        document.getElementsByClassName("newsTitle politica")[aC].innerHTML = noticias_json[aB]["titulo"];
-        document.getElementsByClassName("newsSubtitle politica")[aC].innerHTML = noticias_json[aB]["subtitulo"];
-        document.getElementsByClassName("newsImg politica")[aC].src = noticias_json[aB]["imagenUrl"];
+    for (let aX = 0, aY = 21; aX < 7 & aY < 28; aX++, aY++){
+        document.getElementsByClassName("newsTitle politica")[aX].innerHTML = noticias_json[aY]["titulo"];
+        document.getElementsByClassName("newsSubtitle politica")[aX].innerHTML = noticias_json[aY]["subtitulo"];
+        document.getElementsByClassName("newsImg politica")[aX].src = noticias_json[aY]["imagenUrl"];
         document.getElementsByClassName("tit politica")[0].innerHTML = noticias_json[28]["categoria"];
     }
 }
 
 
-
-categoryPolitica();
-
-
-categoryEconomy();
-
-
-function categorySociedad(){
-
-    for (let nC = 0, nB = 56; nC < 7 & nB < 63; nC++, nB++){
-        document.getElementsByClassName("newsTitle Sociedad")[nC].innerHTML = noticias_json[nB]["titulo"];
-        document.getElementsByClassName("newsSubtitle Sociedad")[nC].innerHTML = noticias_json[nB]["subtitulo"];
-        document.getElementsByClassName("newsImg Sociedad")[nC].src = noticias_json[nB]["imagenUrl"];
-        document.getElementsByClassName("tit Sociedad")[0].innerHTML = noticias_json[7]["categoria"];
-
-}
-
-}
-
-categoryEconomy();
+categoriaDeporte(); categoryEconomy(); catergoryPolitica();
