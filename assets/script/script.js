@@ -60,3 +60,18 @@ function categoryEconomy(){
 }
 
 categoryEconomy();
+
+
+function categorySociedad(){
+
+    for (let nC = 0, nB = 56; nC < 7 & nB < 63; nC++, nB++){
+        document.getElementsByClassName("newsTitle Sociedad")[nC].innerHTML = noticias_json[nB]["titulo"];
+        document.getElementsByClassName("newsSubtitle Sociedad")[nC].innerHTML = noticias_json[nB]["subtitulo"];
+        document.getElementsByClassName("newsImg Sociedad")[nC].src = noticias_json[nB]["imagenUrl"];
+        document.getElementsByClassName("tit Sociedad")[0].innerHTML = noticias_json[7]["categoria"];
+
+}
+
+}
+
+categoryEconomy();
