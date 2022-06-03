@@ -326,6 +326,7 @@ header label:hover {
 .box_two {
     display: flex;
     justify-content: space-between;
+    background-color: red;
 }
 
 .outstanding_four {
@@ -336,7 +337,8 @@ header label:hover {
 }
 
 .img_four {
-    display: flex;
+    width: 150px;
+    height: 150px;
 }
 
 .text_four {
