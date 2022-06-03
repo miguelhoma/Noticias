@@ -239,10 +239,15 @@ header label:hover {
 }
 
 @media (max-width: 468px) {
-    .outstanding_one, .outstanding_two, .outstanding_three, .outstanding_four, .outstanding_five, .outstanding_six {
+    .firstnews, .box_two {
         display: flex;
         flex-direction: column;
-        width: 90%;
+    }
+
+    .outstanding_one, .outstanding_two, .outstanding_three, .outstanding_four, .outstanding_five, .outstanding_six {
+        display:flex;
+        width:90%;
+        justify-content: center;
     }
 }
 
@@ -322,7 +327,6 @@ header label:hover {
 .box_two {
     display: flex;
     justify-content: space-between;
-    background-color: red;
 }
 
 .outstanding_four {
@@ -340,6 +344,18 @@ header label:hover {
 .text_four {
     display: flex;
     flex-direction: column;
+}
+
+.title_one {
+    font-size: x-large;
+}
+
+.subtitle_one {
+    font-size: large;
+}
+
+.title {
+    font-size: large;
 }
 
 
