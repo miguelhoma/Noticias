@@ -242,8 +242,8 @@ header label:hover {
     margin: 2%;
 }
 
-@media (max-width 480px) {
-    .outstanding_one .outstanding_two .outstanding_three .outstanding_four .outstanding_five .outstanding_six {
+@media (max-width 468px) {
+    .outstanding_one, .outstanding_two, .outstanding_three, .outstanding_four, .outstanding_five, .outstanding_six {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -251,7 +251,7 @@ header label:hover {
 }
 
 @media (max-width 768px) {
-    .outstanding_one .outstanding_two .outstanding_three .outstanding_four .outstanding_five .outstanding_six {
+    .outstanding_one, .outstanding_two, .outstanding_three, .outstanding_four, .outstanding_five, .outstanding_six {
         display: flex;
         flex-direction: row;
         width: 40%;
