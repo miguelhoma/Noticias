@@ -253,6 +253,12 @@ header label:hover {
     flex-direction: row;
 }
 
+.img_one {
+    height: 400px;
+    width: 400px;
+    display: flex;
+}
+
 .text_one {
     display: flex;
     flex-direction: column;
@@ -265,9 +271,15 @@ header label:hover {
 
 .outstanding_two {
     margin: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
+}
+
+.img_two {
+    width: 190px;
+    height: 190px;
+    display: flex;
 }
 
 .text_two {
@@ -277,9 +289,15 @@ header label:hover {
 
 .outstanding_three {
     margin: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+}
+
+.img_three {
+    width: 190px;
+    height: 190px;
+    display: flex;
 }
 
 .text_three {
@@ -298,6 +316,12 @@ header label:hover {
     flex-direction: row;
 }
 
+.img_four {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
 .text_four {
     display: flex;
     flex-direction: column;
@@ -310,6 +334,12 @@ header label:hover {
     flex-direction: row;
 }
 
+.img_five {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
 .text_five {
     display: flex;
     flex-direction: column;
@@ -320,6 +350,12 @@ header label:hover {
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
+}
+
+.img_six {
+    width: 150px;
+    height: 150px;
+    display: flex;
 }
 
 .text_six {
