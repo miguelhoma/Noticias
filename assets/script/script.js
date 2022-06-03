@@ -3,7 +3,23 @@ noticias_json = (noticias);
 console.log(noticias_json);
 
 
+function categoriaDeporte(){
 
-document.getElementsByClassName("newsTitle")[0].innerHTML = noticias_json[0]["titulo"];
-document.getElementsByClassName("newsSubtitle")[0].innerHTML = noticias_json[0]["subtitulo"];
-document.getElementsByClassName("newsImg")[0].src = noticias_json[0]["imagenUrl"];
+     for (let nA = 0; nA < 7; nA++) {
+        document.getElementsByClassName("newsTitle")[nA].innerHTML = noticias_json[nA]["titulo"];
+        document.getElementsByClassName("newsSubtitle")[nA].innerHTML = noticias_json[nA]["subtitulo"];
+        document.getElementsByClassName("newsImg")[nA].src = noticias_json[nA]["imagenUrl"];
+
+    }
+
+}
+
+categoriaDeporte();
+
+/*  Proceso de Harsh para descrubrir el loop para obtener categorías
+
+    newsTitle[nA]         noticias_json[nA]
+    newsSubtitle[nA]      noticias_json[nA] 
+    newsImg[nA]           noticias_json[nA]  
+
+*/
