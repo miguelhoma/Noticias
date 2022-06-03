@@ -161,7 +161,6 @@ header label:hover {
 /* Empieza Style de la pagina de la categoria por Harsh */
 
 .containerCategory {
-
     display: flex;
     flex-flow: row wrap;
 }
