@@ -325,6 +325,7 @@ header label:hover {
 
 .box_two {
     display: flex;
+    justify-content: space-between;
 }
 
 .outstanding_four {
@@ -335,48 +336,10 @@ header label:hover {
 }
 
 .img_four {
-    width: 150px;
-    height: 150px;
     display: flex;
 }
 
 .text_four {
-    display: flex;
-    flex-direction: column;
-}
-
-.outstanding_five {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.img_five {
-    width: 150px;
-    height: 150px;
-    display: flex;
-}
-
-.text_five {
-    display: flex;
-    flex-direction: column;
-}
-
-.outstanding_six {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.img_six {
-    width: 150px;
-    height: 150px;
-    display: flex;
-}
-
-.text_six {
     display: flex;
     flex-direction: column;
 }
