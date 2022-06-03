@@ -160,75 +160,65 @@ header label:hover {
 
 /* Empieza Style de la pagina de la categoria por Harsh */
 
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-}
-
-.caja {
+.containerCategory {
     display: flex;
     flex-flow: row wrap;
-    text-align: center;
-    border: 3px solid #000;
-}
-
-.caja>*{
-    padding: 10px;
-    margin: 10px 80px;
-    flex: 1 100%;
 }
 
 .tit {
-    background: red;
-    height: 50px;
-    margin: 10px 80px;
+    background: rgb(238, 76, 76);
+    height: 50%;
+    margin: 1% 8%;
+    flex: 1 100%;
+    text-align: center;
+    padding: 1%;
+    font-size: xx-large;
+    margin-bottom: 3%;
 }
 
 .imagencont {
-    background: aqua;
-    height: 200px;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 40%;
+    margin: 3% 10% 3% 13%;
     display: flex;
     justify-content: space-between;
 }
 
 .newsImg {
-    background: rgb(236, 33, 175);
-    height: 200px;
-    width: 20%;
+    height: 150%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .titulos {
-    background: rgb(3, 209, 82);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-right: 5%;
     margin-left: 5%;
     width: 75%;
 }
 
 .newsTitle {
-    height: 50px;
+    font-size: x-large;
     display: flex;
     justify-content: start;
     align-items: flex-start;
     font-size: large;
     font-weight: bold;
 }
+
 .newsSubtitle {
-    height: 150px;
+    margin-top: 3%;
+    font-size: large;
     display: flex;
     align-self: flex-start;
 }
 
 
+.newsTitle:hover, .newsSubtitle:hover{
+    color:red;
+}
 
 
 
