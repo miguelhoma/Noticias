@@ -14,7 +14,6 @@ function categoriaDeporte(){
 
 }
 
-categoriaDeporte();
 
 /*  Proceso mental de Harsh para descrubrir el loop para obtener categorías
 
@@ -58,6 +57,24 @@ function categoryEconomy(){
 }
 
 }
+
+
+
+
+function categoryPolitica(){
+
+    for (let aC = 0, aB = 21; aC < 7 & aB < 28; aC++, aB++){
+        document.getElementsByClassName("newsTitle politica")[aC].innerHTML = noticias_json[aB]["titulo"];
+        document.getElementsByClassName("newsSubtitle politica")[aC].innerHTML = noticias_json[aB]["subtitulo"];
+        document.getElementsByClassName("newsImg politica")[aC].src = noticias_json[aB]["imagenUrl"];
+        document.getElementsByClassName("tit politica")[0].innerHTML = noticias_json[28]["categoria"];
+    }
+}
+
+
+
+categoryPolitica();
+
 
 categoryEconomy();
 
