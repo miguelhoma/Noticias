@@ -242,6 +242,24 @@ header label:hover {
     margin: 2%;
 }
 
+@media (max-width 480px) {
+    .outstanding_one .outstanding_two .outstanding_three .outstanding_four .outstanding_five .outstanding_six {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media (max-width 768px) {
+    .outstanding_one .outstanding_two .outstanding_three .outstanding_four .outstanding_five .outstanding_six {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        height: auto;
+    }
+
+}
+
 .firstnews {
     display: flex;
 }
@@ -362,6 +380,7 @@ header label:hover {
     display: flex;
     flex-direction: column;
 }
+
 
 /*Acaba Style del index por Miguel*/
 
