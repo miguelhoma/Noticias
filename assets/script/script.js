@@ -14,39 +14,7 @@ function categoriaDeporte(){
 
 }
 
-categoriaDeporte();
 
-/*  Proceso mental de Harsh para descrubrir el loop para obtener categorías
-
-    newsTitle[nA]         noticias_json[nA]
-    newsSubtitle[nA]      noticias_json[nA] 
-    newsImg[nA]           noticias_json[nA]  
-
-*/
-
-// function para categoría de actualidad, en prueba con economía
-// function categoriaActualidad(){
-
-//     let nA = -1; 
-
-//     while(nA < 6){
-
-//         nA ++;
-//         let nB = 7;
-
-//             while ( nB < 14) {   
-
-//             document.getElementsByClassName("newsTitle Act")[nA].innerHTML = noticias_json[nB]["titulo"];
-//             document.getElementsByClassName("newsSubtitle Act")[nA].innerHTML = noticias_json[nB]["subtitulo"];
-//             document.getElementsByClassName("newsImg Act")[nA].src = noticias_json[nB]["imagenUrl"];
-//             document.getElementsByClassName("tit Act")[0].innerHTML = noticias_json[7]["categoria"];
-//             nB++;
-            
-//             }
-    
-//     }
-
-// }
 function categoryEconomy(){
 
     for (let nC = 0, nB = 7; nC < 7 & nB < 14; nC++, nB++){
@@ -75,3 +43,38 @@ function categorySociedad(){
 }
 
 categoryEconomy();
+
+
+
+function categoryPolitica(){
+
+    for (let aC = 0, aB = 21; aC < 7 & aB < 28; aC++, aB++){
+        document.getElementsByClassName("newsTitle politica")[aC].innerHTML = noticias_json[aB]["titulo"];
+        document.getElementsByClassName("newsSubtitle politica")[aC].innerHTML = noticias_json[aB]["subtitulo"];
+        document.getElementsByClassName("newsImg politica")[aC].src = noticias_json[aB]["imagenUrl"];
+        document.getElementsByClassName("tit politica")[0].innerHTML = noticias_json[28]["categoria"];
+    }
+}
+
+
+
+
+function categoryTechnology(){
+
+    for (let bC = 0, bB = 28; bC < 7 & bB < 35; bC++, bB++){
+        document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
+        document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
+        document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
+        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[35]["categoria"];
+    }
+
+}
+
+
+
+
+
+categoriaDeporte();
+categoryPolitica();
+categoryEconomy();
+
