@@ -72,5 +72,6 @@ function categoryPolitica(){
 }
 
 categoriaDeporte();
-categoryEconomy();
 categoryPolitica();
+categoryEconomy();
+
