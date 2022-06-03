@@ -53,7 +53,7 @@ function categoryEconomy(){
         document.getElementsByClassName("newsTitle Actualidad")[nC].innerHTML = noticias_json[nB]["titulo"];
         document.getElementsByClassName("newsSubtitle Actualidad")[nC].innerHTML = noticias_json[nB]["subtitulo"];
         document.getElementsByClassName("newsImg Actualidad")[nC].src = noticias_json[nB]["imagenUrl"];
-        document.getElementsByClassName("tit Acttualidad")[0].innerHTML = noticias_json[7]["categoria"];
+        document.getElementsByClassName("tit Actualidad")[0].innerHTML = noticias_json[7]["categoria"];
 
 }
 
