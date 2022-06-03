@@ -283,7 +283,7 @@ header label:hover {
 }
 
 .text_three {
-    float: left;
+    display: flex;
     flex-direction: column;
 }
 
