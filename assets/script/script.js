@@ -71,6 +71,24 @@ function categoryPolitica(){
     }
 }
 
+
+
+
+function categoryTechnology(){
+
+    for (let bC = 0, bB = 28; bC < 7 & bB < 35; bC++, bB++){
+        document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
+        document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
+        document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
+        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[35]["categoria"];
+    }
+
+}
+
+
+
+
+
 categoriaDeporte();
 categoryEconomy();
 categoryPolitica();
