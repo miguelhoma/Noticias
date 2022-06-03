@@ -240,7 +240,7 @@ main.categoryTemplate, .newsSubtitle{
 
 .mainIndex {
     background:white;
-    margin: 5%;
+    margin: 2%;
 }
 
 .firstnews {
@@ -248,43 +248,44 @@ main.categoryTemplate, .newsSubtitle{
 }
 
 .outstanding_one {
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-}
-
-.img_one {
-    display: flex;
 }
 
 .text_one {
     display: flex;
+    flex-direction: column;
 }
 
 .box_one {
-    
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
 }
 
 .outstanding_two {
-    padding: 10px;
+    margin: 10px;
+    margin-top: 15px;
     display: flex;
+    flex-direction: row;
 }
 
-.img_two {
+.text_two {
     display: flex;
+    flex-direction: column;
 }
 
 .outstanding_three {
+    margin: 10px;
+    margin-bottom: 15px;
     display: flex;
+    flex-direction: row;
 }
 
-.img_three {
+.text_three {
     float: left;
-
+    flex-direction: column;
 }
 
 .box_two {
@@ -292,27 +293,39 @@ main.categoryTemplate, .newsSubtitle{
 }
 
 .outstanding_four {
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
 }
 
-.img_four{
+.text_four {
     display: flex;
+    flex-direction: column;
 }
 
 .outstanding_five {
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
 }
 
-.img_five {
+.text_five {
     display: flex;
+    flex-direction: column;
 }
 
 .outstanding_six {
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
 }
 
-.img_six {
+.text_six {
     display: flex;
+    flex-direction: column;
 }
 
 /*Acaba Style del index por Miguel*/
