@@ -163,6 +163,7 @@ header label:hover {
 .containerCategory {
     display: flex;
     flex-flow: row wrap;
+
 }
 
 .tit {
@@ -177,18 +178,17 @@ header label:hover {
 }
 
 .imagencont {
-    height: 40%;
-    margin: 3% 10% 3% 13%;
+    margin: 2% 10% 2% 10%;
     display: flex;
     justify-content: space-between;
+
 }
 
 .newsImg {
-    height: 150%;
-    width: 40%;
+    margin: 10px;
+    width: 30%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto;
 }
 
 .titulos {
@@ -197,6 +197,8 @@ header label:hover {
     margin-right: 5%;
     margin-left: 5%;
     width: 75%;
+
+    margin: 10px;
 }
 
 .newsTitle {
@@ -204,8 +206,10 @@ header label:hover {
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    font-size: large;
+    font-size: 25px;
     font-weight: bold;
+    margin-top: 10px;
+
 }
 
 .newsSubtitle {
@@ -213,6 +217,8 @@ header label:hover {
     font-size: large;
     display: flex;
     align-self: flex-start;
+
+    margin-top: 40px;
 }
 
 
