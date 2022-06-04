@@ -43,7 +43,7 @@ const noticias = [
       "noticiap1": "Barcelona va en serio por Robert Lewandowski. El diario alemán Bild informó que, a falta más de un mes para el inicio del mercado de fichajes en Europa, el conjunto catalán ya le hizo una primera oferta formal por escrito al Bayern Munich para adquirir al delantero polaco.",
       "noticiap2": "El primer ofrecimiento habría sido de 32 millones de euros, un monto que estaría muy alejado de las pretensiones del club bávaro (40 millones) y del precio de Lewandowski según Transfermarkt (50 millones).",
       "noticiap3": "Cabe recordar que el atacante de 33 años finaliza su contrato recién en 2023, motivo por el cual el Barça sí o sí debe desembolsar dinero si quiere reforzarse con el polaco en este mercado de fichajes. Por su parte, Oliver Kahn -presidente del consejo Directivo del Bayern- manifestó que no se plantean vender a Lewandowski y asegura que cumplirá su vínculo.",
-      "imagenUrl": "https://media.tycsports.com/files/2022/05/22/431433/lewandowski_416x234.webp",
+      "imagenUrl": "https://estaticos-cdn.sport.es/clip/b5c14d3e-fabe-4edc-883f-bdf2d0877fb5_alta-libre-aspect-ratio_default_0.jpg",
       "categoria": "Deporte",
       "url noticia": "https://www.tycsports.com/espana/la-liga/barcelona-robert-lewandowski-oferta-mercado-de-pases-id437130.html"
     },
