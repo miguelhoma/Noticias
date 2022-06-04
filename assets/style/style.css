@@ -358,6 +358,16 @@ header label:hover {
     font-size: large;
 }
 
+.tituloIndex, .subtituloIndex, .parrafoIndex{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.tituloIndex:hover, .subtituloIndex:hover, .parrafoIndex:hover {
+color: red;
+}
+
 
 /*Acaba Style del index por Miguel*/
 
