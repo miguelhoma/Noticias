@@ -389,7 +389,7 @@ header label:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: auto;
     margin: 10px 200px;
 }
 
@@ -405,24 +405,19 @@ header label:hover {
 .imagencont {
     background: aqua;
     margin: 10px 50px ;
-    height: 500px;
     display: flex;
     justify-content: space-between;
 }
 
 .imgenContenido {
     background: rgb(236, 33, 175);
-    height: 500px;
     width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .cont {
-    background: yellow;
-    height: 500px;
-    width: 65%;
+    background: rgb(24, 202, 77);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -508,6 +503,95 @@ header label:hover {
 
 
 
+
+
+@media (max-width: 768px) {
+    .caja {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .caja {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+    .caja>*{
+        padding: 10px;
+        margin: 10px;
+        flex: 1 100%;
+    }
+    
+    .imagencont {
+        background: aqua;
+        margin: 10px 30px ;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .imgenContenido {
+        background: rgb(236, 33, 175);
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cont {
+        background: yellow;
+        width: 100%;
+        height: auto;
+    }
+
+    .contenidoTotal {
+        background: rgb(77, 77, 52);
+        margin: 10px 30px ;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .cont1 {
+        background: rgb(255, 161, 19);
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    
+    .cont2 {
+        background: rgb(197, 149, 77);
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    
+    .fuente{
+        background: rgb(163, 99, 3);
+        margin-left: 90%;
+    }
+
+    .tit {
+        background: red;
+        height: auto;
+        margin: 10px 30px;
+        font-size: 25px;
+        width: 100%;
+    }
+    
+    .subtit {
+        background: blue;
+        height: auto;
+        margin: 10px 30px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+}
 
 
 

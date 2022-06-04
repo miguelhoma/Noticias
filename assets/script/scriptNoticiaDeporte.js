@@ -13,7 +13,7 @@ function categoriaDeporte(){
         document.getElementsByClassName("cont1")[nA].innerHTML = noticias_json[nA]["noticiap2"];
         document.getElementsByClassName("cont2")[nA].innerHTML = noticias_json[nA]["noticiap3"];
         document.getElementsByClassName("fuente")[nA].innerHTML = noticias_json[nA]["autor"];
-        document.getElementsByClassName("tit")[0].innerHTML = noticias_json[0]["categoria"];
+
     }
 
 }
