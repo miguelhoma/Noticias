@@ -361,17 +361,6 @@ header label:hover {
 
 /*Acaba Style del index por Miguel*/
 
-
-
-
-
-
-
-
-
-
-
-
 .caja {
     display: flex;
     flex-flow: row wrap;
@@ -498,12 +487,7 @@ header label:hover {
 
 
 
-
-
-
-
-
-
+/* ----------Se hace responsive pagina del contenido de la noticia---------- */
 
 @media (max-width: 768px) {
     .caja {
@@ -592,6 +576,69 @@ header label:hover {
     }
 
 }
+
+
+@media (max-width: 768px) { 
+    .containerCategory {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tit {
+        background: rgb(76, 106, 238);
+        height: 50%;
+        margin: 1% 8%;
+        flex: 1 100%;
+        text-align: center;
+        padding: 1%;
+        font-size: xx-large;
+        margin-bottom: 3%;
+    }
+    
+    .imagencConCategory {
+        background: rgb(238, 76, 76);
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .newsImg {
+        background: rgb(236, 33, 175);
+        display: flex;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+    .titulos {
+        background-color: aqua;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .newsTitle {
+        background-color: rgb(50, 62, 172);
+        display: flex;
+        font-size: 25px;
+        font-weight: bold;
+
+    }
+
+    .newsSubtitle {
+        background-color: chartreuse;
+        margin-top: 3%;
+        display: flex;
+        color: black;
+    }
+    .newsTitle:hover, .newsSubtitle:hover{
+        color:red;
+    }
+}
+
+
 
 
 
