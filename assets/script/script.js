@@ -55,12 +55,30 @@ function categoryTechnology(){
         document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
         document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
         document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
-        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[35]["categoria"];
+        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[28]["categoria"];
     }
   
 }
 
 
 categoryTechnology();
+
+
+
+
+
+function categoryScience(){
+
+    for (let cC = 0, cB = 35; cC < 7 & cB < 42; cC++, cB++){
+        document.getElementsByClassName("newsTitle ScienceJS")[cC].innerHTML = noticias_json[cB]["titulo"];
+        document.getElementsByClassName("newsSubtitle ScienceJS")[cC].innerHTML = noticias_json[cB]["subtitulo"];
+        document.getElementsByClassName("newsImg ScienceJS")[cC].src = noticias_json[cB]["imagenUrl"];
+        document.getElementsByClassName("tit ScienceJS")[cC].innerHTML = noticias_json[35]["categoria"];
+    }
+  
+}
+
+
+
 
 console.log(noticias_json[28]);
