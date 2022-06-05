@@ -747,7 +747,9 @@ color: red;
   }
 
 
-
+a:visited, a {
+    color: black;
+}
 
 
 
