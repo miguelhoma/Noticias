@@ -2,7 +2,6 @@ noticias_json = (noticias);
 
 console.log(noticias_json);
 
-
 function categoriaDeporte(){
 
      for (let nA = 0; nA < 7; nA++) {
@@ -18,4 +17,6 @@ function categoriaDeporte(){
 
 }
 
-categoriaDeporte()
+categoriaDeporte();
+
+
