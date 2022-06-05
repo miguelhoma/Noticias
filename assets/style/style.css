@@ -166,8 +166,7 @@ header label:hover {
 
 }
 
-.tit {
-    background: rgb(238, 76, 76);
+.tittle {
     height: 50%;
     margin: 1% 8%;
     flex: 1 100%;
@@ -371,6 +370,9 @@ color: red;
 
 /*Acaba Style del index por Miguel*/
 
+
+/*-----------------Empieza el estilo a la página donde se encuentra la noticia--------------*/
+/*Todo el contenido de la pagina*/
 .caja {
     display: flex;
     flex-flow: row wrap;
@@ -382,66 +384,60 @@ color: red;
     margin: 10px;
     flex: 1 100%;
 }
-
-.tit {
-    background: red;
+/*Titulo de la noticia*/
+.tittle {
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     margin: 10px 200px;
 }
-
+/*Subitulo de la noticia*/
 .subtit {
-    background: blue;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     margin: 10px 50px;
 }
-
+/*todo el flex de la imagen con el contenido de la noticia*/
 .imagencont {
-    background: aqua;
     margin: 10px 50px ;
     display: flex;
     justify-content: space-between;
 }
-
+/*Imagen de la noticia*/
 .imgenContenido {
-    background: rgb(236, 33, 175);
     width: 30%;
     display: flex;
     align-items: center;
 }
-
+/*1er contenido noticia*/
 .cont {
-    background: rgb(24, 202, 77);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 10px;
+    text-align: left;
 }
-
+/*Se encuentra el flex con el contenido uno y dos de la noticia*/
 .contenidoTotal {
-    background: yellow;
     margin: 10px 50px ;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 .cont1 {
-    background: rgb(255, 161, 19);
     height: 50px;
     width: 100%;
     height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
 }
 
 .cont2 {
-    background: rgb(197, 149, 77);
     height: 45px;
     width: 100%;
     height: 120px;
@@ -451,9 +447,12 @@ color: red;
 }
 
 .fuente{
-    background: rgb(163, 99, 3);
     margin-left: 90%;
 }
+
+/*-----------------Termina el estilo a la página donde se encuentra la noticia--------------*/
+
+
 .cont3 {
     display: flex;
     align-items: center;
@@ -495,9 +494,7 @@ color: red;
 
 
 
-
-
-/* ----------Se hace responsive pagina del contenido de la noticia---------- */
+/* ----------Empieza responsive pagina del contenido de la noticia---------- */
 
 @media (max-width: 768px) {
     .caja {
@@ -520,7 +517,6 @@ color: red;
     }
     
     .imagencont {
-        background: aqua;
         margin: 10px 30px ;
         height: auto;
         display: flex;
@@ -528,7 +524,7 @@ color: red;
     }
     
     .imgenContenido {
-        background: rgb(236, 33, 175);
+
         height: auto;
         width: 100%;
         align-items: center;
@@ -536,13 +532,11 @@ color: red;
     }
     
     .cont {
-        background: yellow;
         width: 100%;
         height: auto;
     }
 
     .contenidoTotal {
-        background: rgb(77, 77, 52);
         margin: 10px 30px ;
         height: auto;
         display: flex;
@@ -551,41 +545,25 @@ color: red;
     }
     
     .cont1 {
-        background: rgb(255, 161, 19);
         width: 100%;
         height: auto;
         margin-bottom: 5px;
     }
     
     .cont2 {
-        background: rgb(197, 149, 77);
         width: 100%;
         height: auto;
         margin-bottom: 5px;
     }
     
     .fuente{
-        background: rgb(163, 99, 3);
         margin-left: 90%;
     }
 
-    .tit {
-        background: red;
-        height: auto;
-        margin: 10px 30px;
-        font-size: 25px;
-        width: 100%;
-    }
-    
-    .subtit {
-        background: blue;
-        height: auto;
-        margin: 10px 30px;
-        font-size: 15px;
-        width: 100%;
-    }
 
 }
+/* ----------Termina responsive pagina del contenido de la noticia---------- */
+
 
 
 @media (max-width: 768px) { 
@@ -597,8 +575,7 @@ color: red;
         text-align: center;
     }
 
-    .tit {
-        background: rgb(76, 106, 238);
+    .tittle {
         height: 50%;
         margin: 1% 8%;
         flex: 1 100%;
