@@ -114,7 +114,6 @@ header label:hover {
 }
 /*contido donde esta el logo del mundo*/
 .logoMundo {
-    background-color: rgb(48, 48, 48); /*va en color negro*/
     width: 25%;
     height: 80px;
     display: flex;
@@ -127,8 +126,7 @@ header label:hover {
     height: 50px;
 }
 /*contido donde estan las redes sociales*/
-.redesSociales {
-    background-color: rgb(48, 48, 48); /*va en color negro*/
+.redesSociales { /*va en color negro*/
     width: 25%;
     height: 80px;
     display: flex;
@@ -137,7 +135,6 @@ header label:hover {
 }
 /*contido donde esta el copyright*/
 .copyRight {
-    background-color: rgb(48, 48, 48); /*va en color negro*/
     color: white;
     width: 25%;
     height: 80px;
@@ -153,7 +150,7 @@ header label:hover {
     .logoMundo, .redesSociales, .copyRight {
         width: 100%;
         margin: 2%;
-        height: 60px;
+        height: 30px;
     }
 }
 
@@ -163,7 +160,12 @@ header label:hover {
 .containerCategory {
     display: flex;
     flex-flow: row wrap;
+}
 
+.containerCategory>*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
 }
 
 .tit {
@@ -180,7 +182,6 @@ header label:hover {
     margin: 2% 10% 2% 10%;
     display: flex;
     justify-content: space-between;
-
 }
 
 .newsImg {
@@ -224,7 +225,6 @@ header label:hover {
 .newsTitle:hover, .newsSubtitle:hover{
     color:red;
 }
-
 
 
 
@@ -607,6 +607,7 @@ color: red;
 }
 /* ----------Termina responsive pagina del contenido de la noticia---------- */
 
+/* ----------Empieza responsive pagina de categoria de noticias---------- */
 @media (max-width: 768px) { 
     .containerCategory {
         display: flex;
@@ -625,44 +626,37 @@ color: red;
         font-size: xx-large;
         margin-bottom: 3%;
     }
-    
     .imagencConCategory {
-        background: rgb(238, 76, 76);
         height: auto;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    
     .newsImg {
-        background: rgb(236, 33, 175);
         display: flex;
         width: 95%;
         align-items: center;
         justify-content: center;
     }
     .titulos {
-        background-color: aqua;
         width: auto;
         display: flex;
         flex-direction: column;
     }
     .newsTitle {
-        background-color: rgb(50, 62, 172);
         display: flex;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
-
+        justify-content: center;
     }
-
     .newsSubtitle {
-        background-color: chartreuse;
         margin-top: 3%;
         display: flex;
         color: black;
+        font-size: 15px;
     }
-    .newsTitle:hover, .newsSubtitle:hover{
-        color:red;
+    .newsTitle:hover {
+        font-size: 21px;
     }
 }
 
@@ -670,7 +664,12 @@ color: red;
 
 
 
-
+.linea1 {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
 
 
 
