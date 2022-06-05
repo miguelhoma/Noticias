@@ -412,15 +412,19 @@ color: red;
 
 /*todo el flex de la imagen con el contenido de la noticia*/
 .imagencont {
-    margin: 10px 50px ;
+    margin: 10px 10% ;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /*Imagen de la noticia*/
 .imgenContenido {
-    width: 30%;
+    width: 70%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .lineaDos {
@@ -440,7 +444,7 @@ color: red;
 }
 /*Se encuentra el flex con el contenido uno y dos de la noticia*/
 .contenidoTotal {
-    margin: 10px 50px ;
+    margin: 10px 10% ;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
