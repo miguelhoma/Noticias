@@ -80,5 +80,16 @@ function categoryScience(){
 
 
 
+function categoryEntertainment(){
+
+    for (let dC = 0, dB = 14; dC < 7 & dB < 21; dC++, dB++){
+        document.getElementsByClassName("newsTitle ScienceJS")[dC].innerHTML = noticias_json[dB]["titulo"];
+        document.getElementsByClassName("newsSubtitle ScienceJS")[dC].innerHTML = noticias_json[dB]["subtitulo"];
+        document.getElementsByClassName("newsImg ScienceJS")[dC].src = noticias_json[dB]["imagenUrl"];
+        document.getElementsByClassName("tit ScienceJS")[dC].innerHTML = noticias_json[35]["categoria"];
+    }
+
+}
+
 
 console.log(noticias_json[28]);
