@@ -47,11 +47,11 @@ function categoryPolitica(){
 //categoryPolitica();
 
 
-
+//Esquema Jacobo
 
 function categoryTechnology(){
     contenido = "";
-    for (let bB = 0; bB < 25; bB++){
+    for (let bB = 0; bB < 7; bB++){
         //document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
         //document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
         //document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
@@ -64,7 +64,7 @@ function categoryTechnology(){
 
 categoryTechnology();
 
-
+//Fin esquema Jacobo
 
 
 
