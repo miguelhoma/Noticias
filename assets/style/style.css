@@ -167,6 +167,13 @@ header label:hover {
     margin: 10px;
     flex: 1 100%;
 }
+.catName{
+    font-size: xx-small;
+    background-color: rgb(237, 131, 112);
+    max-width: fit-content;
+    margin-top: 0.5%;
+    font-weight: bold;
+}
 
 .tit {
     height: 50%;
