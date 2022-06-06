@@ -22,3 +22,24 @@ function fillCat(){
 }
 }
 fillCat();
+
+
+
+
+/*--------------------Test; numero de noticias en página web sea el mismo que numero de noticias de array------------- */
+/*----------------------Descargar jquery en console para que funcione, $.length es de jquery----------------*/
+// function testNewsNumbr (){
+
+//         const number = noticias_json.length;
+//         const numberTest = $('div.newsTitle').length;
+//         if (number == numberTest) {
+//             console.log("all good");
+//           } else {
+//             console.log("all bad");
+//           };
+    
+// }
+
+// testNewsNumbr();
+
+/*---------Acaba función del test----------------*/
