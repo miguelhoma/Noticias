@@ -38,7 +38,7 @@ function categoryPolitica(){
         document.getElementsByClassName("newsTitle politica")[aC].innerHTML = noticias_json[aB]["titulo"];
         document.getElementsByClassName("newsSubtitle politica")[aC].innerHTML = noticias_json[aB]["subtitulo"];
         document.getElementsByClassName("newsImg politica")[aC].src = noticias_json[aB]["imagenUrl"];
-        document.getElementsByClassName("tit politica")[0].innerHTML = noticias_json[33]["categoria"];
+        document.getElementsByClassName("tit politica")[0].innerHTML = noticias_json[aB]["categoria"];
     }
 }
 
@@ -55,7 +55,7 @@ function categoryTechnology(){
         document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
         document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
         document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
-        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[28]["categoria"];
+        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[bB]["categoria"];
     }
   
 }
@@ -73,7 +73,7 @@ function categoryScience(){
         document.getElementsByClassName("newsTitle ScienceJS")[cC].innerHTML = noticias_json[cB]["titulo"];
         document.getElementsByClassName("newsSubtitle ScienceJS")[cC].innerHTML = noticias_json[cB]["subtitulo"];
         document.getElementsByClassName("newsImg ScienceJS")[cC].src = noticias_json[cB]["imagenUrl"];
-        document.getElementsByClassName("tit ScienceJS")[cC].innerHTML = noticias_json[35]["categoria"];
+        document.getElementsByClassName("tit ScienceJS")[0].innerHTML = noticias_json[cC]["categoria"];
     }
   
 }
@@ -86,7 +86,7 @@ function categoryEntertainment(){
         document.getElementsByClassName("newsTitle ScienceJS")[dC].innerHTML = noticias_json[dB]["titulo"];
         document.getElementsByClassName("newsSubtitle ScienceJS")[dC].innerHTML = noticias_json[dB]["subtitulo"];
         document.getElementsByClassName("newsImg ScienceJS")[dC].src = noticias_json[dB]["imagenUrl"];
-        document.getElementsByClassName("tit ScienceJS")[dC].innerHTML = noticias_json[35]["categoria"];
+        document.getElementsByClassName("tit ScienceJS")[0].innerHTML = noticias_json[dB]["categoria"];
     }
 
 }
