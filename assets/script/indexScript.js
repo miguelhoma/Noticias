@@ -12,3 +12,18 @@ function indexScript(){
 }
 
 indexScript();
+
+/*  
+noticias_html = document.getElementsByClassName("noticia")
+
+for (let nA = 0; nA < 6; nA++) {
+    nB = getRandomInt(0, noticias_json.length() -1)
+}
+
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+*/

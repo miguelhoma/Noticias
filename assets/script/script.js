@@ -14,7 +14,7 @@ function categoriaDeporte(){
 
 }
 
-categoriaDeporte();
+//categoriaDeporte();
 
 
 function categoryEconomy(){
@@ -25,12 +25,12 @@ function categoryEconomy(){
         document.getElementsByClassName("newsImg EconomyJS")[nC].src = noticias_json[nB]["imagenUrl"];
         document.getElementsByClassName("tit EconomyJS")[0].innerHTML = noticias_json[7]["categoria"];
 
-}
+    }
 
 }
 
 
-categoryEconomy();
+//categoryEconomy();
 
 function categoryPolitica(){
 
@@ -44,20 +44,21 @@ function categoryPolitica(){
 
 
 
-categoryPolitica();
+//categoryPolitica();
 
 
 
 
 function categoryTechnology(){
-
-    for (let bC = 0, bB = 28; bC < 7 & bB < 35; bC++, bB++){
-        document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
-        document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
-        document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
-        document.getElementsByClassName("tit technology")[bC].innerHTML = noticias_json[bB]["categoria"];
+    contenido = "";
+    for (let bB = 0; bB < 25; bB++){
+        //document.getElementsByClassName("newsTitle technology")[bC].innerHTML = noticias_json[bB]["titulo"];
+        //document.getElementsByClassName("newsSubtitle technology")[bC].innerHTML = noticias_json[bB]["subtitulo"];
+        //document.getElementsByClassName("newsImg technology")[bC].src = noticias_json[bB]["imagenUrl"];
+        //document.getElementsByClassName("tit technology")[0].innerHTML = noticias_json[bB]["categoria"];
+        contenido += '<div class="imagencConCategory"><img class="newsImg technology" src="" alt=""><div class="titulos"><div class="newsTitle technology">titulo</div><div class="newsSubtitle technology">subtiulo</div></div></div>'
     }
-  
+    document.getElementsByClassName("containerCategory technology")[0].innerHTML = contenido
 }
 
 
