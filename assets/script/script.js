@@ -30,7 +30,7 @@ function categoryEconomy(){
 }
 
 
-//categoryEconomy();
+categoryEconomy();
 
 function categoryPolitica(){
 

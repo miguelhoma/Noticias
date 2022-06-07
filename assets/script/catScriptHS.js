@@ -4,6 +4,7 @@ noticias_json = (noticias);
 function createCat(){
  
     contentAll = "";
+
     for (let bB = 0; bB < 112; bB++){
         contentAll += '<div class="imagencConCategory"><img class="newsImg" src="" alt=""><div class="titulos"><div class="catName">categoría</div><div class="newsTitle">titulo</div><div class="newsSubtitle">subtiulo</div></div></div>';
     }
@@ -25,6 +26,19 @@ function createCat(){
 createCat();
 
 
+//document.getElementsByClassName("categoryAll")[0] ='<div id = "sports" class="imagencConCategory"><img class="newsImg" src="" alt=""><div class="titulos"><div class="catName">categoría</div><div class="newsTitle">titulo</div><div class="newsSubtitle">subtiulo</div></div></div>';
+
+// function button(){
+
+//     var button= getElementById("sports");
+
+//     button.addEventListener(MouseEvent.CLICK, onClick, false, 0, true);
+    
+//     function onClick(e:MouseEvent):void{
+//     navigateToURL(new URLRequest("http://www.sailthru.com/"), "_blank");
+// }
+
+// }
 
 
 
