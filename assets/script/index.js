@@ -26,13 +26,15 @@ function sort(categoria){
 }
 
 
-function firt_display(categoria){
+function firt_display(){
+	categoria =GetParam();
 	sort(categoria);
 	display_data(categoria);
 }
 
 sort("Política")
-function on_button_clicked(categoria){
+function on_button_clicked(){
+	categoria =GetParam();
 	//let categoria = document.getElementById("ver_mas").type;
 	console.log(categoria)
 	display_data(categoria)
@@ -81,3 +83,27 @@ function news_to_HTML(news){
 				 </div>';
 	return answer
 }
+
+function GetParam(){
+	let temp = window.location.hash
+	if(temp.includes('%C3%AD')){temp=temp.replace('%C3%AD', 'í')}
+	if(temp.includes('%C3%B3')){temp=temp.replace('%C3%B3', 'ó')}
+	
+	let answer = temp.substring(1)
+	console.log(answer);
+	return answer
+}
+
+function rep(url){
+	console.log("Hola, mundo")
+	console.log(window.location.href);
+	window.location.href=url;
+	console.log(window.location.href);
+	window.location.reload();
+}
+console.log(window.location.hash);
+
+	// if (gp=="") {gp="default";}
+	// document.write('<img src="'+gp+'.jpg">');
+
+	

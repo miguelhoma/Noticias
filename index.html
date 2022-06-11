@@ -1,220 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style/style.css">
-    <title>TodoNoticias</title>
-</head>
-<body>
-    <header>
+<!Doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title class="nameCategory">Categoría</title>
+      <link rel="stylesheet" href="assets/style/style.css" />
+        <!-- <link rel="stylesheet" href="temlate.css"> -->
+    </head>
+    <body  onload="firt_display('Clima')"> 
+
+        <script type="text/javascript" src="assets/script/noticias.js"></script>
+        <script type="text/javascript" src="assets/script/map.js"></script>
+        <script type="text/javascript" src="assets/script/index.js"></script>
+      <header>
         <div class="menuContainer">
-            <img class="imagenLogo" src="/assets/img/todo noticias1.png" alt="">
+            <img class="imagenLogo" src="assets/img/todo noticias1.png" alt="">
         </div>
         <input type="checkbox" id="btnMenu">
         <label for="btnMenu"><img src="assets/img/menu.svg" alt=""></label>
         <nav class="menu">
             <ul>
-                <li ><a href="/categorySport.html" >Deportes</a></li>
-                <li ><a href="#" >Salud</a></li>
-                <li ><a href="#" >Entretenimiento</a></li>
-                <li ><a href="#" >Actualidad</a></li>
-                <li ><a href="#" >Cultura</a></li>
-                <li ><a href="/categoryPolitica.html" >Política</a></li>
-                <li ><a href="/categoryEconomy.html" >Economía</a></li>
-                <li ><a href="/categoryTechnology.html" >Tecnología</a></li>
-                <li ><a href="/categoryScience.html" >Ciencia</a></li>
-                <li ><a href="#" >País</a></li>
-                <li ><a href="#" >Sociedad</a></li>
-                <li ><a href="#" >Lectura</a></li>
-                <li ><a href="#" >Turismo</a></li>
-                <li ><a href="#" >Gourmet</a></li>
-                <li ><a href="#" >Educacion</a></li>
-                <li ><a href="/categoryClima.html" >Clima</a></li>
+                <li ><a href="index.html?id=#Deporte" onclick = "rep('index.html?id=#Deporte') "" >Deportes</a></li>
+                <li ><a href="index.html?id=#Salud" onclick = "rep('index.html?id=#Salud') " >Salud</a></li>
+                <li ><a href="index.html?id=#Entretenimiento" onclick = "rep('index.html?id=#Entretenimiento') " >Entretenimiento</a></li>
+                <li ><a href="index.html?id=#Actualidad"onclick = "rep('index.html?id=#Actualidad') " >Actualidad</a></li>
+                <li ><a href="index.html?id=#Destacada"onclick = "rep('index.html?id=#Destacada') " >Cultura</a></li>
+                <li ><a href="index.html?id=#Política" onclick = "rep('index.html?id=#Política') ">Política</a></li>
+                <li ><a href="index.html?id=#Economía" onclick = "rep('index.html?id=#Economía') ">Economía</a></li>
+                <li ><a href="index.html?id=#Tecnología"onclick = "rep('index.html?id=#Tecnología') " >Tecnología</a></li>
+                <li ><a href="index.html?id=#Ciencia" onclick = "rep('index.html?id=#Ciencia') ">Ciencia</a></li>
+                <li ><a href="index.html?id=#País" onclick = "rep('index.html?id=#País') ">País</a></li>
+                <li ><a href="index.html?id=#Sociedad" onclick = "rep('index.html?id=#Sociedad') ">Sociedad</a></li>
+                <li ><a href="index.html?id=#Lectura" onclick = "rep('index.html?id=#Lectura') ">Lectura</a></li>
+                <li ><a href="index.html?id=#Turismo" onclick = "rep('index.html?id=#Turismo') ">Turismo</a></li>
+                <li ><a href="index.html?id=#Gourmet" onclick = "rep('index.html?id=#Gourmet') ">Gourmet</a></li>
+                <li ><a href="index.html?id=#Educación" onclick = "rep('index.html?id=#Educación') ">Educacion</a></li>
+                <li ><a href="index.html?id=#Clima" onclick = "rep('index.html?id=#Clima') ">Clima</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="mainIndex">
-        <article class="firstnews">
-            <div class="outstanding_one">
-                <img class="img_one imagenIndex" src="" alt="">
-                <div class="text_one">
-                   <a href="noticiaEntretenimiento1.html"> <div class="title_one tituloIndex">
-                        <p1> </p1>
-                    </div> </a>
-                    <div class="subtitle_one subtituloIndex">
-                        <p2></p2>
-                    </div>
-                    <div class="subtitle parrafoIndex">
-                        <p2></p2>
-                    </div>        
-                </div>
-            </div>
-
-            <div class="box_one">
-
-                <div class="outstanding_two boxOneNot">
-
-                    <img class="img_two imgBoxOne imagenIndex" src="" alt="">
-
-                    <div class="text_two">
-
-                        <div class="title titleBoxOne tituloIndex">
-                        
-                            <p1>
-    
-                            </p1>
-    
-                        </div>
-
-                        <div class="subtitle subtitleBoxOne subtituloIndex">
-
-                            <p2>
-    
-                            </p2>
-    
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="outstanding_three boxOneNot">
-
-                    <img class="img_three imgBoxOne imagenIndex" src="" alt="">
-
-                    <div class="text_three">
-
-                        <div class="title titleBoxOne tituloIndex">
-                        
-                            <p1>
-    
-                            </p1>
-    
-                        </div>
-
-                        <div class="subtitle subtitleBoxOne subtituloIndex">
-
-                            <p2>
-    
-                            </p2>
-    
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article class="box_two">
-
-            <div class="outstanding_four">
-
-                <img class="img_four imgBoxTwo imagenIndex" src="" alt="">
-
-                <div class="four">
-
-                    <div class="title titleBoxTwo tituloIndex">
-                        
-                        <p1>
-
-                        </p1>
-
-                    </div>
-
-                    <div class="subtitle subtitleBoxTwo subtituloIndex">
-
-                        <p2>
-
-                        </p2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="outstanding_four">
-
-                <img class="img_four imgBoxTwo  imagenIndex" src="" alt="">
-
-                <div class="four">
-
-                    <div class="title titleBoxTwo  tituloIndex">
-                        
-                        <p1>
-
-                        </p1>
-
-                    </div>
-
-                    <div class="subtitle subtitleBoxTwo  subtituloIndex">
-
-                        <p2>
-
-                        </p2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="outstanding_four">
-
-                <img class="img_four imgBoxTwo imagenIndex" src="" alt="">
-
-                <div class="four">
-
-                    <div class="title titleBoxTwo tituloIndex">
-                        
-                        <p1>
-
-                        </p1>
-
-                    </div>
-
-                    <div class="subtitle subtitleBoxTwo subtituloIndex">
-
-                        <p2>
-
-                        </p2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
+        <!-- -->
+    <content>
+    </content>
+       
+        <style>
+            
+        </style>
         
-      </main>
+        <div class="button">
+          <button  id="ver_mas"  onclick="on_button_clicked('Clima')">Ver mas</button>
 
-
-      <footer>
-        <div class="footer">
-            <div class="logoMundo">
-                <a href="index.html"><img class="imgMundo" src="/assets/img/mundo.png" alt=""></a>
-            </div>
-            <div class="redesSociales">
-                <img class="imgFacebook" src="/assets/img/logoFacebook.png" alt="">
-                <img class="imgInstagram" src="/assets/img/logoInstagram.png" alt="">
-                <img class="imgTwitter" src="/assets/img/logoTwitter.png" alt="">
-            </div>
-            <div class="copyRight">
-                copyright | todos los derechos reservados
-            </div>
         </div>
-    </footer>
-
-    <script src="/assets/script/noticias.js"></script>
-    <script src="/assets/script/indexScript.js"></script>
-
-    <!-- <script src="/assets/script/script.js"></script> -->
-</body>
+        
+        <footer>
+          <div class="footer">
+              <div class="logoMundo">
+                  <a href="index.html"><img class="imgMundo" src="assets/img/mundo.png" alt=""></a>
+              </div>
+              <div class="redesSociales">
+                  <img class="imgFacebook" src="assets/img/logoFacebook.png" alt="">
+                  <img class="imgInstagram" src="assets/img/logoInstagram.png" alt="">
+                  <img class="imgTwitter" src="assets/img/logoTwitter.png" alt="">
+              </div>
+              <div class="copyRight">
+                  copyright | todos los derechos reservados
+              </div>
+          </div>
+      </footer>
+    </body>
 </html>
