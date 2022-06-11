@@ -9,7 +9,7 @@
 
 header {
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);    
 }
 
 /* Parte de la imagen superior de todonoticias.net */
@@ -166,6 +166,13 @@ header label:hover {
     padding: 10px;
     margin: 10px;
     flex: 1 100%;
+}
+.catName{
+    font-size: xx-small;
+    background-color: rgb(237, 131, 112);
+    max-width: fit-content;
+    margin-top: 0.5%;
+    font-weight: bold;
 }
 
 .tit {
