@@ -8,11 +8,9 @@
       <link rel="stylesheet" href="assets/style/style.css" />
         <!-- <link rel="stylesheet" href="temlate.css"> -->
     </head>
-    <body  onload="firt_display('Clima')"> 
+    <body  onload="firt_display()"> 
 
-        <script type="text/javascript" src="assets/script/noticias.js"></script>
-        <script type="text/javascript" src="assets/script/map.js"></script>
-        <script type="text/javascript" src="assets/script/index.js"></script>
+        
       <header>
         <div class="menuContainer">
             <img class="imagenLogo" src="assets/img/todo noticias1.png" alt="">
@@ -21,43 +19,32 @@
         <label for="btnMenu"><img src="assets/img/menu.svg" alt=""></label>
         <nav class="menu">
             <ul>
-                <li ><a href="index.html?id=#Deporte" onclick = "rep('index.html?id=#Deporte') "" >Deportes</a></li>
-                <li ><a href="index.html?id=#Salud" onclick = "rep('index.html?id=#Salud') " >Salud</a></li>
-                <li ><a href="index.html?id=#Entretenimiento" onclick = "rep('index.html?id=#Entretenimiento') " >Entretenimiento</a></li>
-                <li ><a href="index.html?id=#Actualidad"onclick = "rep('index.html?id=#Actualidad') " >Actualidad</a></li>
-                <li ><a href="index.html?id=#Destacada"onclick = "rep('index.html?id=#Destacada') " >Cultura</a></li>
-                <li ><a href="index.html?id=#Política" onclick = "rep('index.html?id=#Política') ">Política</a></li>
-                <li ><a href="index.html?id=#Economía" onclick = "rep('index.html?id=#Economía') ">Economía</a></li>
-                <li ><a href="index.html?id=#Tecnología"onclick = "rep('index.html?id=#Tecnología') " >Tecnología</a></li>
-                <li ><a href="index.html?id=#Ciencia" onclick = "rep('index.html?id=#Ciencia') ">Ciencia</a></li>
-                <li ><a href="index.html?id=#País" onclick = "rep('index.html?id=#País') ">País</a></li>
-                <li ><a href="index.html?id=#Sociedad" onclick = "rep('index.html?id=#Sociedad') ">Sociedad</a></li>
-                <li ><a href="index.html?id=#Lectura" onclick = "rep('index.html?id=#Lectura') ">Lectura</a></li>
-                <li ><a href="index.html?id=#Turismo" onclick = "rep('index.html?id=#Turismo') ">Turismo</a></li>
-                <li ><a href="index.html?id=#Gourmet" onclick = "rep('index.html?id=#Gourmet') ">Gourmet</a></li>
-                <li ><a href="index.html?id=#Educación" onclick = "rep('index.html?id=#Educación') ">Educacion</a></li>
-                <li ><a href="index.html?id=#Clima" onclick = "rep('index.html?id=#Clima') ">Clima</a></li>
+                <li ><a href="index.html?id=Deporte" >Deportes</a></li>
+                <li ><a href="index.html?id=Salud" >Salud</a></li>
+                <li ><a href="index.html?id=Entretenimiento" >Entretenimiento</a></li>
+                <li ><a href="index.html?id=Actualidad" >Actualidad</a></li>
+                <li ><a href="index.html?id=Destacada" >Cultura</a></li>
+                <li ><a href="index.html?id=Política">Política</a></li>
+                <li ><a href="index.html?id=Economía">Economía</a></li>
+                <li ><a href="index.html?id=Tecnología" >Tecnología</a></li>
+                <li ><a href="index.html?id=Ciencia">Ciencia</a></li>
+                <li ><a href="index.html?id=País">País</a></li>
+                <li ><a href="index.html?id=Sociedad">Sociedad</a></li>
+                <li ><a href="index.html?id=Lectura">Lectura</a></li>
+                <li ><a href="index.html?id=Turismo" >Turismo</a></li>
+                <li ><a href="index.html?id=Gourmet">Gourmet</a></li>
+                <li ><a href="index.html?id=Educación">Educacion</a></li>
+                <li ><a href="index.html?id=Clima">Clima</a></li>
             </ul>
         </nav>
     </header>
-
-        <!-- -->
     <content>
     </content>
-       
-        <style>
-            
-        </style>
-        
-        <div class="button">
-          <button  id="ver_mas"  onclick="on_button_clicked('Clima')">Ver mas</button>
-
-        </div>
-        
+    
         <footer>
           <div class="footer">
               <div class="logoMundo">
-                  <a href="index.html"><img class="imgMundo" src="assets/img/mundo.png" alt=""></a>
+                  <a href="index.html" id="ahref"><img class="imgMundo" src="assets/img/mundo.png" alt=""></a>
               </div>
               <div class="redesSociales">
                   <img class="imgFacebook" src="assets/img/logoFacebook.png" alt="">
@@ -69,5 +56,8 @@
               </div>
           </div>
       </footer>
+      <script type="text/javascript" src="assets/script/noticias.js"></script>
+      <script type="text/javascript" src="assets/script/map.js"></script>
+      <script type="text/javascript" src="assets/script/index.js"></script>
     </body>
 </html>

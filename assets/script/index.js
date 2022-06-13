@@ -5,8 +5,6 @@ function sort(categoria){
 	for (var i=0;i<noticias_json.length;i++){
 		for (var j=0;j<noticias_json.length;j++){
 			if (noticias_json[i]["categoria"] == categoria &&noticias_json[j]["categoria"] == categoria ){
-				// console.log(noticias_json[i]["fecha"])
-				// console.log(noticias_json[j]["fecha"])
 				if (noticias_json[i]["fecha"]<noticias_json[j]["fecha"]){
 					var temp = noticias_json[i]
 					noticias_json[i] = noticias_json[j]
@@ -19,7 +17,6 @@ function sort(categoria){
 	for (var i=0;i<noticias_json.length;i++){
 
 			if (noticias_json[i]["categoria"] == categoria){
-				//console.log(noticias_json[i])
 			}
 
 	}
@@ -27,83 +24,89 @@ function sort(categoria){
 
 
 function firt_display(){
+	console.log("hoa")
 	categoria =GetParam();
 	sort(categoria);
-	display_data(categoria);
+	display_data(categoria, true)
+	let a="index.html?id="+categoria;
+	document.getElementById("ahref").href =a;
+
 }
 
 sort("Política")
 function on_button_clicked(){
 	categoria =GetParam();
 	//let categoria = document.getElementById("ver_mas").type;
-	console.log(categoria)
-	display_data(categoria)
-	var flag=true;
+	document.getElementById("ver_mas").hidden = true;
+	display_data(categoria,false)
+	var flag=false;
 	let i = map.get(categoria);
 	let amount=6;
 	while ( i < noticias_json.length && amount<7) {
 		if (noticias_json[i]["categoria"] == categoria){
-			flag=false;
+			flag=true;
 			amount++;
 		}
 		i++
 
 	}
-	if (flag == true){document.getElementById("ver_mas").hidden = true;}
+	if (flag == true){add_button()}
 	
 
 }
 
-function display_data(categoria){
+function display_data(categoria, flag){
 	
 	let news_html = '';
-	let politician_index =map.get(categoria);
+	let index =map.get(categoria);
 	let amount=0;
 
-	while ( politician_index < noticias_json.length && amount<6) {
+	while ( index < noticias_json.length && amount<6) {
 		
-		if (noticias_json[politician_index]["categoria"] == categoria){
-			news_html += news_to_HTML(noticias_json[politician_index]);
+		if (noticias_json[index]["categoria"] == categoria){
+			news_html += news_to_HTML(noticias_json[index],index);
 			amount++;
 		}
-		politician_index++;
+		index++;
 
 	}
+	if(flag == true){
+		news_html+=add_button()
+	}
 	document.querySelector("content").innerHTML+= news_html;
-	map.set(categoria,politician_index)
+	map.set(categoria,index)
 }
 
-function news_to_HTML(news){
+function news_to_HTML(news,index){
 	let answer = '<div class="imagencConCategory">\
 					<img class="newsImg politica" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
 					<div class="titulos">\
-						<div class="newsTitle politica">'+news["titulo"]+'</div>\
+						<div class="newsTitle politica"> <a href="index.html?id='+index+'"  >'+news["titulo"]+'</a></div>\
 						<div class="newsSubtitle politica">'+news["subtitulo"]+'</div>\
 				    </div>\
 				 </div>';
 	return answer
 }
 
+function add_button(){
+	let answer = '<div class="button">\
+					<button  id="ver_mas"  onclick="on_button_clicked()">Ver mas</button>\
+				</div>';
+	return answer
+
+}
+
 function GetParam(){
-	let temp = window.location.hash
-	if(temp.includes('%C3%AD')){temp=temp.replace('%C3%AD', 'í')}
-	if(temp.includes('%C3%B3')){temp=temp.replace('%C3%B3', 'ó')}
-	
-	let answer = temp.substring(1)
-	console.log(answer);
+	let url = window.location.href
+	let temp = url.split("=")
+	let answer=temp[1];
+	if(answer.includes('%C3%AD')){answer=answer.replace('%C3%AD', 'í')}
+	if(answer.includes('%C3%B3')){answer=answer.replace('%C3%B3', 'ó')}
 	return answer
 }
 
-function rep(url){
-	console.log("Hola, mundo")
-	console.log(window.location.href);
-	window.location.href=url;
-	console.log(window.location.href);
-	window.location.reload();
-}
-console.log(window.location.hash);
 
-	// if (gp=="") {gp="default";}
-	// document.write('<img src="'+gp+'.jpg">');
+
+
 
 	
