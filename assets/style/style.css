@@ -751,7 +751,13 @@ a:visited, a {
     color: black;
 }
 
-
+#ver_mas{
+    background-color: crimson;
+    height: 50px;
+}
+.button{
+    text-align: center;
+}
 
 
 
