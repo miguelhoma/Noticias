@@ -761,10 +761,54 @@ a:visited, a {
 
 
 
+/*Style de la página de categorías*/
+
+@media (max-width: 468px){
+
+    .new_category {
+        margin: 5%;
+        width: 90%;
+        height: 200px;
+        display: flex;
+    }
+
+    .page_categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width: 469px) {
+    .page_categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .new_category {
+        margin: 2%;
+        width: 46%;
+        height:200px;
+        display: flex;
+    }
+}
+
+
+.img_category {
+    display: flex;
+    flex-direction: row;
+}
+
+.text_category {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
-
+/*Style de la página de categorías*/
 
 
 
