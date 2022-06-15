@@ -1,5 +1,23 @@
 
 let noticias_json = (noticias);
+function firt_display(){
+	categoria =GetParam();//take name of category from window url
+	sort(categoria);//sort data of categoria with method 'bubble sort'
+	display_data(categoria, true);// display 6 news and button (if out database has more news)
+	display_choose(categoria);//highlight  category
+	let a="index.html?id="+categoria;
+	document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
+}
+function GetParam(){
+	let url = window.location.href//window.location - current page; href -url of window
+	let temp = url.split("=") 
+	let answer=temp[1]; // take word(name of categoria) after '='
+	console.log(answer);
+	if(answer.includes('%C3%AD')){answer=answer.replace('%C3%AD', 'í')}
+	if(answer.includes('%C3%B3')){answer=answer.replace('%C3%B3', 'ó')}
+	console.log(answer);
+	return answer
+}
 
 function sort(categoria){
 	for (var i=0;i<noticias_json.length;i++){
@@ -22,59 +40,32 @@ function sort(categoria){
 	}
 }
 
-
-function firt_display(){
-	console.log("hoa")
-	categoria =GetParam();
-	sort(categoria);
-	display_data(categoria, true)
-	let a="index.html?id="+categoria;
-	document.getElementById("ahref").href =a;
-
-}
-
-sort("Política")
-function on_button_clicked(){
-	categoria =GetParam();
-	//let categoria = document.getElementById("ver_mas").type;
-	document.getElementById("ver_mas").hidden = true;
-	display_data(categoria,false)
-	var flag=false;
-	let i = map.get(categoria);
-	let amount=6;
-	while ( i < noticias_json.length && amount<7) {
-		if (noticias_json[i]["categoria"] == categoria){
-			flag=true;
-			amount++;
-		}
-		i++
-
-	}
-	if (flag == true){add_button()}
+function display_data(categoria){
 	
-
-}
-
-function display_data(categoria, flag){
-	
-	let news_html = '';
-	let index =map.get(categoria);
-	let amount=0;
+	let news_html = '';//  text for news and button
+	let index =map.get(categoria);// array index which we stopped
+	let amount=0;// amount of added news
 
 	while ( index < noticias_json.length && amount<6) {
 		
 		if (noticias_json[index]["categoria"] == categoria){
-			news_html += news_to_HTML(noticias_json[index],index);
-			amount++;
+			news_html += news_to_HTML(noticias_json[index],index);// make div and put it on text
+			amount++;// + 1 added news
 		}
-		index++;
+		index++;//next index of array
 
 	}
-	if(flag == true){
-		news_html+=add_button()
+	while ( index < noticias_json.length && amount<7) {
+		if (noticias_json[index]["categoria"] == categoria){
+			flag=true;// if database has more news we make button
+			amount++;
+		}
+		index++
+
 	}
-	document.querySelector("content").innerHTML+= news_html;
-	map.set(categoria,index)
+	if (flag == true){news_html +=add_button()}// make button and put it on text
+	document.querySelector("content").innerHTML+= news_html;//put  text on html page  
+	map.set(categoria,index)// for no repetition news
 }
 
 function news_to_HTML(news,index){
@@ -96,17 +87,18 @@ function add_button(){
 
 }
 
-function GetParam(){
-	let url = window.location.href
-	let temp = url.split("=")
-	let answer=temp[1];
-	if(answer.includes('%C3%AD')){answer=answer.replace('%C3%AD', 'í')}
-	if(answer.includes('%C3%B3')){answer=answer.replace('%C3%B3', 'ó')}
-	return answer
+
+function display_choose(categoria){
+	let button = document.getElementById(categoria);
+	button.style.backgroundColor = 'rgb(188,188,188)';
+}
+
+
+function on_button_clicked(){
+	categoria =GetParam();//take name of category from window url
+	document.getElementById("ver_mas").hidden = true;// button disappears
+	display_data(categoria)//display 6 news and button (if out database has more news)
 }
 
 
 
-
-
-	
