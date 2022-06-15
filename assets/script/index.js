@@ -21,7 +21,6 @@ function firt_display(){
 		display_todo_data();
 		a='index.html';
 	} 
-	
 	document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
 }
 function GetParam(){
@@ -104,7 +103,6 @@ function sort(categoria){
 		}
 	}
 }
-
 function display_data(categoria){
 	
 	let news_html = '';//  text for news and button
@@ -121,6 +119,7 @@ function display_data(categoria){
 
 	}
 	let flag = false;
+
 	while ( index < noticias_json.length && amount<7) {
 		if (noticias_json[index]["categoria"] == categoria){
 			flag=true;// if database has more news we make button
