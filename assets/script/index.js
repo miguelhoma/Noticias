@@ -55,6 +55,7 @@ function display_data(categoria){
 		index++;//next index of array
 
 	}
+	flag=false;
 	while ( index < noticias_json.length && amount<7) {
 		if (noticias_json[index]["categoria"] == categoria){
 			flag=true;// if database has more news we make button
@@ -96,7 +97,7 @@ function display_choose(categoria){
 
 function on_button_clicked(){
 	categoria =GetParam();//take name of category from window url
-	document.getElementById("ver_mas").hidden = true;// button disappears
+	document.getElementById("ver_mas").remove();// button disappears
 	display_data(categoria)//display 6 news and button (if out database has more news)
 }
 
