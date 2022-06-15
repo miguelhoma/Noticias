@@ -40,7 +40,7 @@ function display_data(categoria, flag){
 	while ( index < noticias_json.length && amount<6) {
 		
 		if (noticias_json[index]["categoria"] == categoria){
-			news_html += news_to_HTML(noticias_json[index],index);
+			news_html += news_to_HTML(noticias_json[index]);
 			amount++;
 		}
 		index++;
@@ -53,12 +53,12 @@ function display_data(categoria, flag){
 	map.set(categoria,index)
 }
 
-function news_to_HTML(news,index){
+function news_to_HTML(news){
 	let answer = '<div class="imagencConCategory">\
-					<img class="newsImg politica" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
+					<img class="newsImg " src="'+news["urlImagen"]+'" alt="'+news["alt"]+'">\
 					<div class="titulos">\
-						 <a href="index.html?id='+index+'" onclick="secondisplay()"><div class="newsTitle politica">'+news["titulo"]+'</a></div>\
-						<div class="newsSubtitle politica">'+news["subtitulo"]+'</div>\
+						 <a href="index.html?id='+news["newsID"].toString()+'" ><div class="newsTitle ">'+news["titulo"]+'</div></a>\
+						<div class="newsSubtitle ">'+news["subtitulo"]+'</div>\
 				    </div>\
 				 </div>';
 	return answer
@@ -93,14 +93,14 @@ function newsPage_to_html(news){
 					<div class="subtit">'+news["subtitulo"]+'</div>\
 					<div class="lineaUno"></div>\
 					<div class="imagencont">\
-						<img class="imagenContenido" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
+						<img class="imagenContenido" src="'+news["urlImagen"]+'" alt="'+news["alt"]+'">\
 					</div>\
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
 						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
-						<div class="cont">'+news["noticiap1"]+'</div>\
+						<div class="cont">'+news["contNoticia"]+'</div>\
 						<div class="fuente">\
-							<a href="'+news["url noticia"]+' target="_blank"><div class="cont3">Origen</div></a>\
+							<a href="'+news["urlNoticia"]+' target="_blank"><div class="cont3">Origen</div></a>\
 						</div>\
 				</section>';
 
@@ -110,18 +110,17 @@ function newsPage_to_html(news){
 function displayNewsData(noticiasIndex){
 
     let noticiaHtml = '';
-	i = noticiasIndex - 1;
-    noticiaHtml += newsPage_to_html(noticias_json[i]);
+    noticiaHtml += newsPage_to_html(noticias_json[noticiasIndex - 100]);
     document.querySelector("content").innerHTML = noticiaHtml;
 
 }
 
 function secondisplay(){
+	noticias_json.sort(function(a,b){return a.newsID - b.newsID});
     noticiasIndex = GetParamNot();
     displayNewsData(noticiasIndex);
-	console.log("noticia" + noticiasIndex)
+	console.log("noticia" + noticiasIndex);
 }
-
 
 
 
