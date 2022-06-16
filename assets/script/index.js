@@ -4,7 +4,7 @@ function firt_display(){
 	categoria =GetParam();//take name of category from window url
 	sort(categoria);//sort data of categoria with method 'bubble sort'
 	display_data(categoria, true);// display 6 news and button (if out database has more news)
-	display_choose(categoria);//highlight  category
+	//display_choose(categoria);//highlight  category
 	// let a="index.html";  //the logo already has link in html for index start page
 	// document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
 }
@@ -129,7 +129,7 @@ function newsPage_to_html(news){
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
 						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
-						<div class="cont"><p>'+parrafoContenidoSeparado[0]+'</p><p>'+parrafoContenidoSeparado[1]+'</p><p>'+parrafoContenidoSeparado[2]+'</p></div>\
+						<div class="cont"><p>'+parrafoContenidoSeparado[0]+'</p><br/><p>'+parrafoContenidoSeparado[1]+'</p><br/><p>'+parrafoContenidoSeparado[2]+'</p></div>\
 						<div class="fuente">\
 							<a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a>\
 						</div>\

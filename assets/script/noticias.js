@@ -281,7 +281,7 @@ const noticias = [
     "titulo": "Angelina Jolie es retirada de estación de tren en Ucrania tras amenaza de bombardeo",
     "subtitulo": "La actriz viajó a Ucrania como enviada del Alto Comisionado de las Naciones Unidas para conversar con los refugiados afectados por la guerra.",
     "contNoticia": "Angelina Jolie llegó al oeste de Ucrania el pasado 30 de abril. La actriz viajó a la ciudad de Leópolis (Lviv) como una enviada del Alto Comisionado de las Naciones Unidas (Acnur), a fines de hablar con los refugiados producto de la guerra de Rusia con el país vecino.\\nLa actriz visitó un hospital en el que se reunió con niños que resultaron heridos en un bombardeo en la estación de Kramatorsk el 8 de abril. Allí, la ganadora de dos Oscar conversó con los afectados por la situación.\\nEl domingo 1 de mayo, Angelina Jolie siguió recorriendo la estación de tren y de forma repentina se sorprendió al escuchar las sirenas de alerta de una amenaza de ataque aéreo. En las imágenes que se hicieron virales en redes sociales, se ve a la artista correr huyendo del lugar.",
-    "urlImagen": "https://www.magacin247.com/espectaculo-internacional-angelina-jolie-es-retirada-de-estacion-de-tren-en-ucrania-tras-amenaza-de-bombardeo/",
+    "urlImagen": "https://cdn.cnn.com/cnnnext/dam/assets/220430144723-angelina-jolie-lviv-ukraine-0430-super-tease.jpg",
     "alt": "La actriz Angelina Jolie (Foto: Instagram)",
     "categoria": "Entretenimiento",
     "urlNoticia": "https://www.magacin247.com/espectaculo-internacional-angelina-jolie-es-retirada-de-estacion-de-tren-en-ucrania-tras-amenaza-de-bombardeo/",
