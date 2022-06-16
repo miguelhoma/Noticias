@@ -5,8 +5,8 @@ function firt_display(){
 	sort(categoria);//sort data of categoria with method 'bubble sort'
 	display_data(categoria, true);// display 6 news and button (if out database has more news)
 	display_choose(categoria);//highlight  category
-	let a="index.html?id="+categoria;
-	document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
+	// let a="index.html";  //the logo already has link in html for index start page
+	// document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
 }
 function GetParam(){
 	let url = window.location.href//window.location - current page; href -url of window
@@ -43,19 +43,20 @@ function sort(categoria){
 function display_data(categoria){
 	
 	let news_html = '';//  text for news and button
-	let index =map.get(categoria);// array index which we stopped
-	let amount=0;// amount of added news
+	let index = map.get(categoria);// array index which we stopped
+	let amount = 0;// amount of added news
 
 	while ( index < noticias_json.length && amount<6) {
 		
 		if (noticias_json[index]["categoria"] == categoria){
-			news_html += news_to_HTML(noticias_json[index],index);// make div and put it on text
+			news_html += news_to_HTML(noticias_json[index]);// make div and put it on text
 			amount++;// + 1 added news
 		}
 		index++;//next index of array
 
 	}
 	flag=false;
+	map.set(categoria,index)// for no repetition news
 	while ( index < noticias_json.length && amount<7) {
 		if (noticias_json[index]["categoria"] == categoria){
 			flag=true;// if database has more news we make button
@@ -66,15 +67,15 @@ function display_data(categoria){
 	}
 	if (flag == true){news_html +=add_button()}// make button and put it on text
 	document.querySelector("content").innerHTML+= news_html;//put  text on html page  
-	map.set(categoria,index)// for no repetition news
+	
 }
 
-function news_to_HTML(news,index){
+function news_to_HTML(news){
 	let answer = '<div class="imagencConCategory">\
-					<img class="newsImg politica" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
+					<img class="newsImg" src="'+news["urlImagen"]+'" alt="'+news["alt"]+'">\
 					<div class="titulos">\
-						<div class="newsTitle politica"> <a href="index.html?id='+index+'"  >'+news["titulo"]+'</a></div>\
-						<div class="newsSubtitle politica">'+news["subtitulo"]+'</div>\
+						<a href="index.html?id='+news["newsID"]+'"> <div class="newsTitle">'+news["titulo"]+'</div></a>\
+						<div class="newsSubtitle">'+news["subtitulo"]+'</div>\
 				    </div>\
 				 </div>';
 	return answer
@@ -104,19 +105,19 @@ function on_button_clicked(){
 
 
 /* función para mostrar noticia con click desde la página de categoria */
-// function GetParamNot(){
-// 	let url = window.location.href;
-// 	console.log(url);
-// 	let temp = url.split("=");
-// 	console.log(temp);
-// 	let answer = temp[1];
-// 	console.log(answer);
-// 	return answer;
-// }
+function GetParamNot(){
+ 	let url = window.location.href;
+ 	console.log(url);
+	let temp = url.split("=");
+	console.log(temp);
+ 	let answer = temp[1];
+ 	console.log(answer);
+ 	return answer;
+}
 
 
 function newsPage_to_html(news){ 
-	blikblak = news["contNoticia"].split("\\n"); 
+	parrafoContenidoSeparado = news["contNoticia"].split("\\n"); 
 
     newsPage = '<section class="caja">\
 					<div class="tittle">'+news["titulo"]+'</div>\
@@ -128,7 +129,7 @@ function newsPage_to_html(news){
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
 						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
-						<div class="cont"><p>'+blikblak[0]+'</p><p>'+blikblak[1]+'</p><p>'+blikblak[2]+'</p></div>\
+						<div class="cont"><p>'+parrafoContenidoSeparado[0]+'</p><p>'+parrafoContenidoSeparado[1]+'</p><p>'+parrafoContenidoSeparado[2]+'</p></div>\
 						<div class="fuente">\
 							<a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a>\
 						</div>\
@@ -137,16 +138,16 @@ function newsPage_to_html(news){
     return newsPage;
 }
 
-function displayNewsData(noticiasIndex){ 
+function displayNewsData(noticiasIdIndex){ 
     let noticiaHtml = '';
-    noticiaHtml += newsPage_to_html(noticias_json[noticiasIndex - 100]);
+    noticiaHtml += newsPage_to_html(noticias_json[noticiasIdIndex - 100]);
     document.querySelector("content").innerHTML = noticiaHtml;
 }
 
 function secondisplay(){
 	//noticias_json.sort(function(a,b){return a.newsID - b.newsID});
-    noticiasIndex = GetParam(); 
-    displayNewsData(noticiasIndex); 
-	console.log("noticia" + noticiasIndex); 
+    noticiasIdIndex = GetParamNot(); 
+    displayNewsData(noticiasIdIndex); 
+	console.log("noticia" + noticiasIdIndex); 
 }
 
