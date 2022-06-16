@@ -87,7 +87,9 @@ function firt_display(){
 // }
 
 
-function newsPage_to_html(news){
+function newsPage_to_html(news){ 
+	blikblak = news["contNoticia"].split("\\n"); 
+
     newsPage = '<section class="caja">\
 					<div class="tittle">'+news["titulo"]+'</div>\
 					<div class="subtit">'+news["subtitulo"]+'</div>\
@@ -98,26 +100,26 @@ function newsPage_to_html(news){
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
 						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
-						<div class="cont">'+news["contNoticia"]+'</div>\
+						<div class="cont"><p>'+blikblak[0]+'</p><p>'+blikblak[1]+'</p><p>'+blikblak[2]+'</p></div>\
 						<div class="fuente">\
-							<a href="'+news["urlNoticia"]+' target="_blank"><div class="cont3">Origen</div></a>\
+							<a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a>\
 						</div>\
 				</section>';
 
     return newsPage;
 }
 
-function displayNewsData(noticiasIndex){
+function displayNewsData(noticiasIndex){ 
     let noticiaHtml = '';
     noticiaHtml += newsPage_to_html(noticias_json[noticiasIndex - 100]);
     document.querySelector("content").innerHTML = noticiaHtml;
 }
 
 function secondisplay(){
-	noticias_json.sort(function(a,b){return a.newsID - b.newsID});
-    noticiasIndex = GetParam();
-    displayNewsData(noticiasIndex);
-	console.log("noticia" + noticiasIndex);
+	//noticias_json.sort(function(a,b){return a.newsID - b.newsID});
+    noticiasIndex = GetParam(); 
+    displayNewsData(noticiasIndex); 
+	console.log("noticia" + noticiasIndex); 
 }
 
 

@@ -102,6 +102,9 @@ header label:hover {
 
 /*---------------- Footer ----------------*/
 /*cotenido del footer*/
+footer {
+    object-position: 0% 100% !important;
+}
 .footer {
     background-color: rgb(0, 0, 0);
     height: auto;
@@ -504,10 +507,12 @@ color: red;
 /*1er contenido noticia*/
 .cont {
     display: flex;
-    margin: 10px;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: left;
     font-size: 20px;
 }
+
 /*Se encuentra el flex con el contenido uno y dos de la noticia*/
 .contenidoTotal {
     margin: 10px 10% ;
@@ -643,10 +648,7 @@ color: red;
         font-size: 20px;
     }
     
-    .cont {
-        width: 100%;
-        height: auto;
-    }
+  
 
     .contenidoTotal {
         margin: 10px 30px ;
@@ -654,6 +656,10 @@ color: red;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    .cont {
+        width: 100%;
+        height: auto;
     }
     
     .cont1 {
