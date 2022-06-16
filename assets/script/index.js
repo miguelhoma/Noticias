@@ -1,5 +1,6 @@
 
 let noticias_json = (noticias);
+
 function firt_display(){
 	categoria =GetParam();//take name of category from window url
 	sort(categoria);//sort data of categoria with method 'bubble sort'
