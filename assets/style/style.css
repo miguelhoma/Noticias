@@ -509,6 +509,7 @@ color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: fit-content;
     text-align: left;
     font-size: 20px;
 }
@@ -516,7 +517,7 @@ color: red;
 /*Se encuentra el flex con el contenido uno y dos de la noticia*/
 .contenidoTotal {
     margin: 10px 10% ;
-    height: 300px;
+    min-height: fit-content;
     display: flex;
     flex-wrap: wrap;
     text-align: left;
