@@ -103,3 +103,50 @@ function on_button_clicked(){
 
 
 
+/* función para mostrar noticia con click desde la página de categoria */
+// function GetParamNot(){
+// 	let url = window.location.href;
+// 	console.log(url);
+// 	let temp = url.split("=");
+// 	console.log(temp);
+// 	let answer = temp[1];
+// 	console.log(answer);
+// 	return answer;
+// }
+
+
+function newsPage_to_html(news){ 
+	blikblak = news["contNoticia"].split("\\n"); 
+
+    newsPage = '<section class="caja">\
+					<div class="tittle">'+news["titulo"]+'</div>\
+					<div class="subtit">'+news["subtitulo"]+'</div>\
+					<div class="lineaUno"></div>\
+					<div class="imagencont">\
+						<img class="imagenContenido" src="'+news["urlImagen"]+'" alt="'+news["alt"]+'">\
+					</div>\
+					<div class="lineaDos"></div>\
+					<div class="contenidoTotal">\
+						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
+						<div class="cont"><p>'+blikblak[0]+'</p><p>'+blikblak[1]+'</p><p>'+blikblak[2]+'</p></div>\
+						<div class="fuente">\
+							<a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a>\
+						</div>\
+				</section>';
+
+    return newsPage;
+}
+
+function displayNewsData(noticiasIndex){ 
+    let noticiaHtml = '';
+    noticiaHtml += newsPage_to_html(noticias_json[noticiasIndex - 100]);
+    document.querySelector("content").innerHTML = noticiaHtml;
+}
+
+function secondisplay(){
+	//noticias_json.sort(function(a,b){return a.newsID - b.newsID});
+    noticiasIndex = GetParam(); 
+    displayNewsData(noticiasIndex); 
+	console.log("noticia" + noticiasIndex); 
+}
+
