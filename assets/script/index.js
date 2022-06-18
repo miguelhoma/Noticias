@@ -2,12 +2,17 @@
 let noticias_json = (noticias);
 
 function firt_display(){
-	categoria =GetParam();//take name of category from window url
+
+	categoria = GetParam();//take name of category from window url
+	if (isNaN(categoria)){
 	sort(categoria);//sort data of categoria with method 'bubble sort'
 	display_data(categoria, true);// display 6 news and button (if out database has more news)
-	//display_choose(categoria);//highlight  category
+	display_choose(categoria);//highlight  category
+	}else{secondisplay();}
 	// let a="index.html";  //the logo already has link in html for index start page
 	// document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
+	
+	
 }
 function GetParam(){
 	let url = window.location.href//window.location - current page; href -url of window
@@ -94,6 +99,7 @@ function add_button(){
 function display_choose(categoria){
 	let button = document.getElementById(categoria);
 	button.style.backgroundColor = 'rgb(188,188,188)';
+
 }
 
 
@@ -129,11 +135,10 @@ function newsPage_to_html(news){
 					</div>\
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
-						<div class="fecha">'+news["fecha"]+'<div class = "autor">'+news["autor"]+'</div></div>\
+						<div class="fecha">'+news["fecha"]+'</div><div class = "autor"> Autor: '+news["autor"]+'</div><div class="nombreDeCategoria"><a href="index.html?id='+news["categoria"]+'">'+news["categoria"]+'</a></div>\
 						<div class="cont"><p>'+parrafoContenidoSeparado[0]+'</p><br/><p>'+parrafoContenidoSeparado[1]+'</p><br/><p>'+parrafoContenidoSeparado[2]+'</p></div>\
-						<div class="fuente">\
-							<a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a>\
-						</div>\
+						<div class="fuente"><a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a></div>\
+					</div>\
 				</section>';
 
     return newsPage;

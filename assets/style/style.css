@@ -384,52 +384,6 @@ color: red;
 }
 /*-------responsive página de índex acaba-----------*/
 
-/* .box_one {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .text_two {
-    display: flex;
-    flex-direction: column;
-} */
-
-/*Style de outstanding three*/
-
-
-/* .outstanding_three {
-    margin: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-} */
-
-/* .img_three {
-    width: 190px;
-    height: 190px;
-    display: flex;
-} */
-
-/* .text_three {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .img_four {
-    width: 190px;
-    height: 190px;
-} */
-
-
-/* .text_four {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .title {
-    font-size: large;
-} */
-
 
 /*Acaba Style del index por Miguel*/
 
@@ -477,6 +431,20 @@ color: red;
 }
 
 /*todo el flex de la imagen con el contenido de la noticia*/
+
+.nombreDeCategoria, .autor, .fecha, .fuente{
+    margin-top: 1%;
+    margin-left: 1%;
+    background-color: black;
+    color: red;
+    max-width: fit-content;
+    padding: 1%;
+}
+
+.fecha{
+    margin-left: 0%;
+}
+
 .imagencont {
     /* width: 50%;
     height: 50%; */
@@ -511,6 +479,7 @@ color: red;
     margin-top: 3%;
     text-align: justify;
     font-size: 20px;
+
 }
 /*Se encuentra el flex con el contenido uno y dos de la noticia*/
 .contenidoTotal {
@@ -545,11 +514,13 @@ color: red;
     margin-top: 2%;;
     margin-left: 90%;
 }
-
+.cont3{
+    color: red;
+}
 /*-----------------Termina el estilo a la página donde se encuentra la noticia--------------*/
 
-.cont3:hover{
-    color: #f00;
+.cont3:hover, .nombreDeCategoria:hover, .autor:hover, .fecha:hover{
+    background-color: rgba(122, 122, 122, 0.3);
 }
 
 .intereses {
@@ -738,6 +709,12 @@ color: red;
 a:visited, a {
     color: black;
 }
+
+ .nombreDeCategoria a:link, .nombreDeCategoria a:visited {
+    color: red;
+}
+
+
 
 #ver_mas{
     background-color: crimson;
