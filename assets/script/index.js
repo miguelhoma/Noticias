@@ -115,14 +115,10 @@ function on_button_clicked(){
 /* función para mostrar noticia con click desde la página de categoria */
 function GetParamNot(){
  	let url = window.location.href;
- 	console.log(url);
 	let temp = url.split("=");
-	console.log(temp);
  	let answer = temp[1];
- 	console.log(answer);
  	return answer;
 }
-
 
 function newsPage_to_html(news){ 
 	parrafoContenidoSeparado = news["contNoticia"].split("\\n"); 

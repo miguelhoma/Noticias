@@ -1,107 +1,107 @@
 
 let noticias_json = (noticias);
-function firt_display(){
-    if (window.location.href.includes("?id=")){
-        categoria =GetParam();//take name of category from window url
-        sort(categoria);//sort data of categoria with method 'bubble sort'
-        display_data(categoria, true);// display 6 news and button (if out database has more news)
-        //display_choose(categoria);//highlight  category
-        // let a="index.html";  //the logo already has link in html for index start page
-        // document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
-    }else{
-        noticiasPrueba ();
-    }
-}
-function GetParam(){
-    let url = window.location.href//window.location - current page; href -url of window
-    let temp = url.split("=") 
-    let answer=temp[1]; // take word(name of categoria) after '='
-    console.log(answer);
-    if(answer.includes('%C3%AD')){answer=answer.replace('%C3%AD', 'í')}
-    if(answer.includes('%C3%B3')){answer=answer.replace('%C3%B3', 'ó')}
-    console.log(answer);
-    return answer
-}
+// function firt_display(){
+//     if (window.location.href.includes("?id=")){
+//         categoria =GetParam();//take name of category from window url
+//         sort(categoria);//sort data of categoria with method 'bubble sort'
+//         display_data(categoria, true);// display 6 news and button (if out database has more news)
+//         //display_choose(categoria);//highlight  category
+//         // let a="index.html";  //the logo already has link in html for index start page
+//         // document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
+//     }else{
+//         noticiasPrueba ();
+//     }
+// }
+// function GetParam(){
+//     let url = window.location.href//window.location - current page; href -url of window
+//     let temp = url.split("=") 
+//     let answer=temp[1]; // take word(name of categoria) after '='
+//     console.log(answer);
+//     if(answer.includes('%C3%AD')){answer=answer.replace('%C3%AD', 'í')}
+//     if(answer.includes('%C3%B3')){answer=answer.replace('%C3%B3', 'ó')}
+//     console.log(answer);
+//     return answer
+// }
 
-function sort(categoria){
-    for (var i=0;i<noticias_json.length;i++){
-        for (var j=0;j<noticias_json.length;j++){
-            if (noticias_json[i]["categoria"] == categoria &&noticias_json[j]["categoria"] == categoria ){
-                if (noticias_json[i]["fecha"]<noticias_json[j]["fecha"]){
-                    var temp = noticias_json[i]
-                    noticias_json[i] = noticias_json[j]
-                    noticias_json[j] = temp
-                }
-            }
+// function sort(categoria){
+//     for (var i=0;i<noticias_json.length;i++){
+//         for (var j=0;j<noticias_json.length;j++){
+//             if (noticias_json[i]["categoria"] == categoria &&noticias_json[j]["categoria"] == categoria ){
+//                 if (noticias_json[i]["fecha"]<noticias_json[j]["fecha"]){
+//                     var temp = noticias_json[i]
+//                     noticias_json[i] = noticias_json[j]
+//                     noticias_json[j] = temp
+//                 }
+//             }
             
-        }
-    }
-    for (var i=0;i<noticias_json.length;i++){
+//         }
+//     }
+//     for (var i=0;i<noticias_json.length;i++){
 
-            if (noticias_json[i]["categoria"] == categoria){
-            }
+//             if (noticias_json[i]["categoria"] == categoria){
+//             }
 
-    }
-}
+//     }
+// }
 
-function display_data(categoria){
+// function display_data(categoria){
     
-    let news_html = '';//  text for news and button
-    let index =map.get(categoria);// array index which we stopped
-    let amount=0;// amount of added news
+//     let news_html = '';//  text for news and button
+//     let index =map.get(categoria);// array index which we stopped
+//     let amount=0;// amount of added news
 
-    while ( index < noticias_json.length && amount<6) {
+//     while ( index < noticias_json.length && amount<6) {
         
-        if (noticias_json[index]["categoria"] == categoria){
-            news_html += news_to_HTML(noticias_json[index],index);// make div and put it on text
-            amount++;// + 1 added news
-        }
-        index++;//next index of array
+//         if (noticias_json[index]["categoria"] == categoria){
+//             news_html += news_to_HTML(noticias_json[index],index);// make div and put it on text
+//             amount++;// + 1 added news
+//         }
+//         index++;//next index of array
 
-    }
-    flag=false;
-    while ( index < noticias_json.length && amount<7) {
-        if (noticias_json[index]["categoria"] == categoria){
-            flag=true;// if database has more news we make button
-            amount++;
-        }
-        index++
+//     }
+//     flag=false;
+//     while ( index < noticias_json.length && amount<7) {
+//         if (noticias_json[index]["categoria"] == categoria){
+//             flag=true;// if database has more news we make button
+//             amount++;
+//         }
+//         index++
 
-    }
-    if (flag == true){news_html +=add_button()}// make button and put it on text
-    document.querySelector("content").innerHTML+= news_html;//put  text on html page  
-    map.set(categoria,index)// for no repetition news
-}
+//     }
+//     if (flag == true){news_html +=add_button()}// make button and put it on text
+//     document.querySelector("content").innerHTML+= news_html;//put  text on html page  
+//     map.set(categoria,index)// for no repetition news
+// }
 
-function news_to_HTML(news,index){
-    let answer = '<div class="imagencConCategory">\
-                    <img class="newsImg politica" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
-                    <div class="titulos">\
-                        <div class="newsTitle politica"> <a href="index.html?id='+index+'"  >'+news["titulo"]+'</a></div>\
-                        <div class="newsSubtitle politica">'+news["subtitulo"]+'</div>\
-                    </div>\
-                 </div>';
-    return answer
-}
+// function news_to_HTML(news,index){
+//     let answer = '<div class="imagencConCategory">\
+//                     <img class="newsImg politica" src="'+news["imagenUrl"]+'" alt="'+news["alt"]+'">\
+//                     <div class="titulos">\
+//                         <div class="newsTitle politica"> <a href="index.html?id='+index+'"  >'+news["titulo"]+'</a></div>\
+//                         <div class="newsSubtitle politica">'+news["subtitulo"]+'</div>\
+//                     </div>\
+//                  </div>';
+//     return answer
+// }
 
-function add_button(){
-    let answer = '<div class="button">\
-                    <button  id="ver_mas"  onclick="on_button_clicked()">Ver mas</button>\
-                </div>';
-    return answer
+// function add_button(){
+//     let answer = '<div class="button">\
+//                     <button  id="ver_mas"  onclick="on_button_clicked()">Ver mas</button>\
+//                 </div>';
+//     return answer
 
-}
+// }
 
-function display_choose(categoria){
-    let button = document.getElementById(categoria);
-    button.style.backgroundColor = 'rgb(188,188,188)';
-}
+// function display_choose(categoria){
+//     let button = document.getElementById(categoria);
+//     button.style.backgroundColor = 'rgb(188,188,188)';
+// }
 
-function on_button_clicked(){
-    categoria =GetParam();//take name of category from window url
-    document.getElementById("ver_mas").remove();// button disappears
-    display_data(categoria)//display 6 news and button (if out database has more news)
-}
+// function on_button_clicked(){
+//     categoria =GetParam();//take name of category from window url
+//     document.getElementById("ver_mas").remove();// button disappears
+//     display_data(categoria)//display 6 news and button (if out database has more news)
+// }
 
 function  noticiasAleatoriasDelIndex(newsID, titulo, subtitulo, urlImagen, alt){
     /*
@@ -215,7 +215,7 @@ function noticiasPrueba (){
         urlImagen = noticias_json[i]["urlImagen"];
         newsID = noticias_json[i]["newsID"];
         alt = noticias_json[i]["alt"];
-        noticiasAleatorias += noticiasAleatoriasDelIndex(newsID,titulo,subtitulo,urlImagen,alt)
+        noticiasAleatorias = noticiasAleatoriasDelIndex(newsID,titulo,subtitulo,urlImagen,alt)
         
         //(noticias_json[i]["newsID"], noticias_json[i]["titulo"], subtitulo = noticias_json[i]["subtitulo"], urlImagen = noticias_json[i]["urlImagen"],noticias_json[i]["alt"] );
     
@@ -223,5 +223,18 @@ function noticiasPrueba (){
     document.querySelector("content").innerHTML = noticiasAleatorias;
 }
 
+noticiasPrueba();
 
 
+function indexScript(){
+
+    for (let nA = 0, nB = 15; nA < 6 & nB < 112; nA++, nB+=8){
+        document.getElementsByClassName("tituloIndex")[nA].innerHTML = noticias_json[nB]["titulo"];
+        document.getElementsByClassName("subtituloIndex")[nA].innerHTML = noticias_json[nB]["subtitulo"];
+        document.getElementsByClassName("imagenIndex")[nA].src = noticias_json[nB]["urlImagen"];
+    }
+    
+    document.getElementsByClassName("parrafoIndex")[0].innerHTML = noticias_json[15]["contNoticia"]
+}
+
+indexScript();
