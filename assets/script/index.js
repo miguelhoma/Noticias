@@ -150,7 +150,7 @@ function secondisplay(){
 
 function  noticiasAleatoriasDelIndex(){
 
-    noticiasAleatorias = `<main class="mainIndex"><article class="firstnews">\
+    noticiasAleatorias = `<article class="firstnews">\
             <div class="outstanding_one">\
                 <img class="img_one imagenIndex" src="${urlImagen}" alt="${alt}">\
                 <div class="text_one">\
@@ -237,7 +237,7 @@ function  noticiasAleatoriasDelIndex(){
                     </a>\
                 </div>\
             </div>\
-        </article> </main>` 
+        </article>` 
     return noticiasAleatorias;
 }
 
@@ -250,7 +250,7 @@ function noticiasPrueba(){
         urlImagen = noticias_json[i]["urlImagen"];
         newsID = noticias_json[i]["newsID"];
         alt = noticias_json[i]["alt"];
-        noticiasAleatorias = noticiasAleatoriasDelIndex(newsID,titulo,subtitulo,urlImagen,alt)
+        noticiasAleatorias = noticiasAleatoriasDelIndex()
     }
     document.querySelector("main").innerHTML = noticiasAleatorias;
 }
