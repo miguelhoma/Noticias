@@ -4,16 +4,17 @@ let noticias_json = (noticias);
 function firt_display(){
 
 	categoria = GetParam();//take name of category from window url
+	
 	if (isNaN(categoria)){
 	sort(categoria);//sort data of categoria with method 'bubble sort'
 	display_data(categoria, true);// display 6 news and button (if out database has more news)
 	display_choose(categoria);//highlight  category
-	}else{secondisplay();}
-	// let a="index.html";  //the logo already has link in html for index start page
-	// document.getElementById("ahref").href =a;//make href and put on button 'back'    'ahref' is id of button 'back'
-	
+	} else {
+		secondisplay();
+	  }
 	
 }
+
 function GetParam(){
 	let url = window.location.href//window.location - current page; href -url of window
 	let temp = url.split("=") 
