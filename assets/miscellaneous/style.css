@@ -1,0 +1,765 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Barra de navegación Matias */
+
+header {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Parte de la imagen superior de todonoticias.net */
+
+.menuContainer {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------- imagen del logo grande arriba ----------------*/
+.menuContainer .imagenLogo{
+    justify-content: center;
+    margin: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width:70%;
+}
+
+/* esto es el menu hamburguesa que se encuentra oculto*/
+#btnMenu {
+    display: none;
+    float: right;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background-color: rgba(71, 71, 71, 0.3); /*le da el color al menu hamburguesa*/
+    border: 1px solid black;
+}
+
+/* parta de la barra de navegacion de los links con las noticias */
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu li:hover {
+    background-color: rgba(122, 122, 122, 0.3); /*le da el color al menu al pasar el mouse*/
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: red;
+    text-decoration: none;
+}
+
+/*---------------- responsive menú de navegación ----------------*/
+@media (max-width: 768px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: rgb(0, 0, 0);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #ffffff;
+    }
+
+    #btnMenu:checked ~ .menu {
+        margin: 0;
+    }
+    .menu li:hover { 
+        background-color: rgba(119, 119, 119, 0.363);/*le da el color al menu hamburgesa al pasar el mouse*/
+    }
+}
+
+/*---------------- Footer ----------------*/
+/*cotenido del footer*/
+.footer {
+    background-color: rgb(0, 0, 0);
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*contido donde esta el logo del mundo*/
+.logoMundo {
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*logo del mundo*/
+.imgMundo {
+    width: 50px;
+    height: 50px;
+}
+/*contido donde estan las redes sociales*/
+.redesSociales { /*va en color negro*/
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*contido donde esta el copyright*/
+.copyRight {
+    color: white;
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*---------------- responsive footer ----------------*/
+
+@media (max-width: 768px) {
+    .logoMundo, .redesSociales, .copyRight {
+        width: 100%;
+        margin: 2%;
+        height: 30px;
+    }
+}
+
+
+/* Empieza Style de la pagina de la categoria por Harsh */
+
+.containerCategory {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.containerCategory>*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+}
+
+.tit {
+    height: 50%;
+    margin: 1% 8%;
+    flex: 1 100%;
+    text-align: center;
+    padding: 1%;
+    font-size: xx-large;
+    margin-bottom: 3%;
+}
+
+.imagencConCategory {
+    margin: 2% 10% 2% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsImg {
+    margin: 10px;
+    width: 30%;
+    display: flex;
+    height: auto;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 75%;
+    margin: 10px;
+}
+
+.newsTitle {
+    font-size: x-large;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+.newsSubtitle {
+    margin-top: 3%;
+    font-size: large;
+    display: flex;
+    align-self: flex-start;
+
+    margin-top: 40px;
+}
+
+
+.newsTitle:hover, .newsSubtitle:hover{
+    color:red;
+}
+
+
+
+/* Acaba Style de la pagina de la categoria por Harsh*/
+
+
+/* Empieza Style del index por Miguel*/
+
+.mainIndex {
+    margin: 1%;
+}
+
+.firstnews {
+    display: flex;
+}
+
+/*Style de outstanding one*/
+.outstanding_one {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 160%;
+    max-height: fit-content;
+}
+
+.img_one {
+    width: 50%;
+    height: 60%;
+    display: flex;
+}
+
+.box_one, .text_two, .text_three, .text_four{
+    display: flex;
+    flex-direction: column;
+}
+
+.title_one {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.subtitle_one {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.parrafoIndex{
+    height: 25%;
+    font-size: smaller;
+    overflow: scroll;
+}
+
+/*Style de  box two / outstanding two*/
+
+.boxOneNot {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgBoxOne, .imgBoxTwo{
+    width: 170px;
+    height: 170px;
+
+}
+
+.titleBoxOne, .titleBoxTwo{
+    font-weight: bold;
+}
+
+.subtitleBoxOne, .subtitleBoxTwo{
+    font-size: medium;
+}
+
+.box_two {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Style de outstanding four*/
+
+.outstanding_four {
+    display: flex;
+    flex-direction: row;
+}
+
+.tituloIndex, .subtituloIndex, .parrafoIndex{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.tituloIndex:hover {
+color: red;
+}
+
+/*-------responsive página de índex-----------*/
+
+@media screen and (max-width: 450px){
+
+    .mainIndex article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainIndex article img{
+        width: 30%;
+        height: 60%;
+    }
+
+    .tituloIndex {
+        font-size: large;
+
+    }
+    .subtituloIndex{
+        display: none;
+    }
+    
+    .parrafoIndex{
+        display: none;
+    }
+
+    .outstanding_four, .outstanding_two{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+
+}
+@media screen and (max-width: 768px){
+
+    .mainIndex article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainIndex article img{
+        width: 30%;
+        height: 60%;
+    }
+
+    .tituloIndex {
+        font-size: large;
+
+    }
+    .subtituloIndex{
+        font-size: medium;
+        font-weight: 400;
+    }
+    
+    .parrafoIndex{
+        display: none;
+    }
+
+    .boxOneNot, .boxTwoNot, .outstanding_four{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+}
+/*-------responsive página de índex acaba-----------*/
+
+
+/*Acaba Style del index por Miguel*/
+
+
+/*-----------------Empieza el estilo a la página donde se encuentra la noticia--------------*/
+
+/*Todo el contenido de la pagina*/
+
+.caja {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.caja>*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+}
+/*Titulo de la noticia*/
+.tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 10px 200px;
+    font-size: 50px;
+}
+/*Subitulo de la noticia*/
+.subtit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 10px 50px;
+    font-size: 30px;
+}
+
+.lineaUno {
+    border-top: 1px solid black;
+    height: 2px;
+    max-width: 600px;
+    padding: 0;
+    margin: 25px auto 25px auto;
+}
+
+/*todo el flex de la imagen con el contenido de la noticia*/
+
+.nombreDeCategoria, .autor, .fecha, .fuente{
+    margin-top: 1%;
+    margin-left: 1%;
+    background-color: black;
+    color: red;
+    max-width: fit-content;
+    padding: 1%;
+}
+
+.fecha{
+    margin-left: 0%;
+}
+
+.imagencont {
+    /* width: 50%;
+    height: 50%; */
+    margin: 10px 10% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*Imagen de la noticia*/
+.imgenContenido {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.lineaDos {
+    border-top: 1px solid black;
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 50px auto 0 auto;
+}
+
+/*1er contenido noticia*/
+.cont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: justify;
+    font-size: 20px;
+
+}
+/*Se encuentra el flex con el contenido uno y dos de la noticia*/
+.contenidoTotal {
+    margin: 10px 10% ;
+    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.fuente{
+    margin-top: 2%;;
+    margin-left: 90%;
+}
+.cont3{
+    color: red;
+}
+/*-----------------Termina el estilo a la página donde se encuentra la noticia--------------*/
+
+.cont3:hover, .nombreDeCategoria:hover, .autor:hover, .fecha:hover{
+    background-color: rgba(122, 122, 122, 0.3);
+}
+
+/* .intereses {
+    background: rgb(0, 140, 255);
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.interes1 {
+    background: rgb(0, 255, 13);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interes2 {
+    background: rgb(0, 255, 13);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.interes3 {
+    background: rgb(0, 255, 13);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+
+/* ----------Empieza responsive pagina del contenido de la noticia---------- */
+
+@media (max-width: 768px) {
+    .caja {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .caja {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+    .caja>*{
+        padding: 10px;
+        margin: 10px;
+        flex: 1 100%;
+    }
+    
+    .tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 10px 15px;
+        font-size: 30px;
+    }
+
+    /*Subitulo de la noticia*/
+    .subtit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 5px 13px;
+        font-size: 25px;
+    }
+
+    .imagencont {
+        margin: 10px 30px ;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .imgenContenido {
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+    
+    .cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenidoTotal {
+        margin: 10px 30px ;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }   
+    
+    .fuente{
+        margin-left: 90%;
+    }
+}
+/* ----------Termina responsive pagina del contenido de la noticia---------- */
+
+/* ----------Empieza responsive pagina de categoria de noticias---------- */
+@media (max-width: 768px) { 
+    .containerCategory {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .lineaUno {
+        border-top: 1px solid black;
+        height: 2px;
+        max-width: 150px;
+        padding: 0;
+        margin: 50px auto 0 auto;
+    }
+    .tit {
+        height: 50%;
+        margin: 1% 8%;
+        flex: 1 100%;
+        text-align: center;
+        padding: 1%;
+        font-size: xx-large;
+        margin-bottom: 3%;
+    }
+    .imagencConCategory {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .newsImg {
+        display: flex;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+    .titulos {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .newsTitle {
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        justify-content: center;
+    }
+    .newsSubtitle {
+        margin-top: 3%;
+        display: flex;
+        color: black;
+        font-size: 15px;
+    }
+    .newsTitle:hover {
+        font-size: 21px;
+    }
+}
+
+
+.linea1 {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
+
+
+a:visited, a {
+    color: black;
+}
+
+ .nombreDeCategoria a:link, .nombreDeCategoria a:visited {
+    color: red;
+}
+
+
+#ver_mas{
+    background-color: crimson;
+    height: 50px;
+}
+.button{
+    text-align: center;
+}
+
+
+
+/*Style de la página de categorías*/
+
+@media (max-width: 468px){
+
+    .new_category {
+        margin: 5%;
+        width: 90%;
+        height: 200px;
+        display: flex;
+    }
+
+    .page_categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width: 469px) {
+    .page_categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .new_category {
+        margin: 2%;
+        width: 46%;
+        height:200px;
+        display: flex;
+    }
+}
+
+
+.img_category {
+    display: flex;
+    flex-direction: row;
+}
+
+.text_category {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*Style de la página de categorías*/
+
+
+
+
+
+
+
+
+
