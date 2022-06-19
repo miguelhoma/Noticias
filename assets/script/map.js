@@ -15,4 +15,4 @@ map.set('Actualidad', 0);
 map.set('Turismo', 0);
 map.set('Gourmet', 0);
 map.set('Salud', 0);
-map.set('Cultura', 0);
+

@@ -255,16 +255,17 @@ header label:hover {
 
 .upperBoxRightNewsIndex .newsBoxIndex{
     height: 48%;
+    margin-left: 15%;
 }
 
 /*Ajuste de imágenes*/
 .newsOne img{
-    width: 60%;
+    width: 80%;
     height: 100%;
 }
 
 .newsTwo img, .newsThree img{
-    width: 190px;
+    width: 250px;
     height: 190px;
 }
 
@@ -278,12 +279,20 @@ header label:hover {
 /*Ajuste de título y subtítulo*/
  .newsTitleIndex{
     font-weight: bold;
-    margin-top: 2%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.newsTitleIndex:hover{
+    color: red;
 }
 .newsSubtitleIndex{
+    margin-top: 2%;
     font-weight: 400;
+    margin-left: 3%;
 }
-
+.upperBoxRightNewsIndex .newsNameIndex{
+    width: 50%;
+}
 @media (max-width: 768px) {
     .indexPage, .newsNameIndex {
         display: flex;

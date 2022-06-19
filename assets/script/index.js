@@ -148,7 +148,7 @@ function secondisplay(){
 }
 
 function indexScript(){
-    for (let nA = 0, nB = 15; nA < 6 & nB < 112; nA++, nB+=8){
+    for (let nA = 0, nB = 10; nA < 12 & nB < 112; nA++, nB+=9){
         document.getElementsByClassName("newsTitleIndex")[nA].innerHTML = noticias_json[nB]["titulo"];
         document.getElementsByClassName("newsSubtitleIndex")[nA].innerHTML = noticias_json[nB]["subtitulo"];
         document.getElementsByClassName("newsImageIndex")[nA].src = noticias_json[nB]["urlImagen"];
