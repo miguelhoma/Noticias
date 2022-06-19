@@ -228,20 +228,47 @@ header label:hover {
 
 
 /* Acaba Style de la pagina de la categoria por Harsh*/
+.indexPage {
+    border: 10px solid black;
+    display: flex;
+    flex-direction: column;
+}
 
+.upperBoxIndex, .lowerBoxIndex{
+    display: flex;
+    flex-direction: row;;
+}
+
+.newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
+    border: 1px solid red;
+    width: 50%;
+}
+
+.lowerBoxIndex .newsBoxIndex{
+    border: 1px solid blue;
+    width: 33%;
+}
+
+.upperBoxRightNewsIndex .newsBoxIndex{
+    height: 48%;
+    border: 1px solid black;
+}
+/*Nuevo style del index por harsh empieza*/
+
+/*Nuevo style del index por harsh acaba*/
 
 /* Empieza Style del index por Miguel*/
 
-.mainIndex {
+/* .mainIndex {
     margin: 1%;
 }
 
 .firstnews {
     display: flex;
-}
+} */
 
 /*Style de outstanding one*/
-.outstanding_one {
+/* .outstanding_one {
     margin-top: 2%;
     margin-bottom: 2%;
     display: flex;
@@ -279,7 +306,7 @@ header label:hover {
 
 /*Style de  box two / outstanding two*/
 
-.boxOneNot {
+/* .boxOneNot {
     margin-top: 8%;
     display: flex;
     flex-direction: row;
@@ -303,11 +330,11 @@ header label:hover {
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /*Style de outstanding four*/
 
-.outstanding_four {
+/* .outstanding_four {
     display: flex;
     flex-direction: row;
 }
@@ -320,11 +347,11 @@ header label:hover {
 
 .tituloIndex:hover {
 color: red;
-}
+} */ 
 
 /*-------responsive página de índex-----------*/
 
-@media screen and (max-width: 450px){
+/* @media screen and (max-width: 450px){
 
     .mainIndex article {
         display: flex;
@@ -385,7 +412,7 @@ color: red;
         margin-bottom: 2%;
     }
 
-}
+} */
 /*-------responsive página de índex acaba-----------*/
 
 
