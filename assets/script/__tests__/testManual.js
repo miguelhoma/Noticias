@@ -40,7 +40,11 @@ function testNewsPage(){
                 parrafoContenidoSeparado = noticias_json[url-100]["contNoticia"].split("\\n"); 
                 if (document.getElementsByClassName("parrafoNoticia")[i].textContent == parrafoContenidoSeparado[i]){
                     console.log("El parrafo " + (i + 1) + " tiene contenido correcto" )
-                } else {console.log("El contenido de la página está mal")}}}        
+                } else {console.log("El contenido de la página está mal")}}}  
+        
+        if(document.querySelector(".linkNoticia").href == noticias_json[url-100]["urlNoticia"]){
+            console.log("Link de origen correcto")
+        }else{console.log("Origen 404")}
     } else{
          console.log("No estamos en una noticia")
        }
