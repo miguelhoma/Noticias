@@ -226,170 +226,181 @@ header label:hover {
 }
 
 
-
 /* Acaba Style de la pagina de la categoria por Harsh*/
 
-
-/* Empieza Style del index por Miguel*/
-
-.mainIndex {
-    margin: 1%;
-}
-
-.firstnews {
-    display: flex;
-}
-
-/*Style de outstanding one*/
-.outstanding_one {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    flex-direction: row;
-    width: 160%;
-    max-height: fit-content;
-}
-
-.img_one {
-    width: 50%;
-    height: 60%;
-    display: flex;
-}
-
-.box_one, .text_two, .text_three, .text_four{
+/*Nuevo style del index por harsh empieza*/
+/*Estructura general, dos cajas, arriba y de abajo*/
+.indexPage, .newsNameIndex {
     display: flex;
     flex-direction: column;
 }
 
-.title_one {
-    font-size: x-large;
-    font-weight: bolder;
+.new{ 
+    width: 1000px;
 }
 
-.subtitle_one {
-    font-size: medium;
-    font-weight: 600;
-}
-
-.parrafoIndex{
-    height: 25%;
-    font-size: smaller;
-    overflow: scroll;
-}
-
-/*Style de  box two / outstanding two*/
-
-.boxOneNot {
-    margin-top: 8%;
+.upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
     display: flex;
     flex-direction: row;
+    margin-top: 1%;
 }
 
-.imgBoxOne, .imgBoxTwo{
-    width: 170px;
-    height: 170px;
-
+.newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
+    width: 50%;
 }
 
-.titleBoxOne, .titleBoxTwo{
+.lowerBoxIndex .newsBoxIndex{
+    width: 33%;
+}
+
+.upperBoxRightNewsIndex .newsBoxIndex{
+    height: 48%;
+}
+
+/*Ajuste de imágenes*/
+.newsOne img{
+    width: 60%;
+    height: 100%;
+}
+
+.newsTwo img, .newsThree img{
+    width: 190px;
+    height: 190px;
+}
+
+.lowerBoxIndex img{
+    width: 40%;   
+}
+
+.indexPage img{
+    margin: 1%;
+}
+/*Ajuste de título y subtítulo*/
+ .newsTitleIndex{
     font-weight: bold;
-}
-
-.subtitleBoxOne, .subtitleBoxTwo{
-    font-size: medium;
-}
-
-.box_two {
     margin-top: 2%;
-    display: flex;
-    justify-content: space-between;
+}
+.newsSubtitleIndex{
+    font-weight: 400;
 }
 
-/*Style de outstanding four*/
-
-.outstanding_four {
-    display: flex;
-    flex-direction: row;
-}
-
-.tituloIndex, .subtituloIndex, .parrafoIndex{
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
-}
-
-.tituloIndex:hover {
-color: red;
-}
-
-/*-------responsive página de índex-----------*/
-
-@media screen and (max-width: 450px){
-
-    .mainIndex article {
+@media (max-width: 768px) {
+    .indexPage, .newsNameIndex {
         display: flex;
         flex-direction: column;
     }
 
-    .mainIndex article img{
-        width: 30%;
-        height: 60%;
+   
+    .upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+
+    }
+   
+    .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
+        width: 70%;
     }
 
-    .tituloIndex {
-        font-size: large;
-
+    .lowerBoxIndex .newsNameIndex{
+        width: 210%;
     }
-    .subtituloIndex{
-        display: none;
+
+    .lowerBoxIndex .newsBoxIndex{
+        width: 33%;
     }
     
-    .parrafoIndex{
-        display: none;
+    .upperBoxRightNewsIndex .newsBoxIndex{
+        height: 48%;
+    }
+    
+    .newsBoxIndex img {
+        width: 100%;
+        height: 100%;
     }
 
-    .outstanding_four, .outstanding_two{
+    .lowerBoxIndex img {
+        width: 210%;
+        height: 100%;
+    }
+
+    /*Ajuste de título y subtítulo*/
+    .newsTitleIndex{
+        font-weight: bold;
         margin-top: 2%;
-        margin-bottom: 2%;
     }
-
-
-}
-@media screen and (max-width: 768px){
-
-    .mainIndex article {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mainIndex article img{
-        width: 30%;
-        height: 60%;
-    }
-
-    .tituloIndex {
-        font-size: large;
-
-    }
-    .subtituloIndex{
-        font-size: medium;
+    .newsSubtitleIndex{
         font-weight: 400;
     }
     
-    .parrafoIndex{
-        display: none;
+    .newsNameIndex {
+        font-size: 15px;
     }
 
-    .boxOneNot, .boxTwoNot, .outstanding_four{
+    
+
+}
+
+@media (max-width: 390px) {
+    .indexPage, .newsNameIndex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+    }
+   
+    .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
+        width: 50%;
+    }
+
+    .lowerBoxIndex .newsNameIndex{
+        width: 150%;
+    }
+
+    .lowerBoxIndex .newsBoxIndex{
+        width: 33%;
+    }
+    
+    .upperBoxRightNewsIndex .newsBoxIndex{
+        height: 48%;
+    }
+    
+    .newsBoxIndex img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .lowerBoxIndex img {
+        width: 150%;
+        height: 100%;
+    }
+
+    /*Ajuste de título y subtítulo*/
+    .newsTitleIndex{
+        font-weight: bold;
         margin-top: 2%;
-        margin-bottom: 2%;
+    }
+    .newsSubtitleIndex{
+        font-weight: 400;
+    }
+    
+    .newsNameIndex {
+        font-size: 15px;
     }
 
 }
-/*-------responsive página de índex acaba-----------*/
 
 
-/*Acaba Style del index por Miguel*/
+
+/*Nuevo style del index por harsh acaba*/
 
 
 /*-----------------Empieza el estilo a la página donde se encuentra la noticia--------------*/
@@ -570,7 +581,7 @@ color: red;
         align-items: center;
         width: 100%;
         height: auto;
-        margin: 10px 15px;
+
         font-size: 30px;
     }
 
@@ -581,15 +592,13 @@ color: red;
         align-items: center;
         width: 100%;
         height: auto;
-        margin: 5px 13px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
-    .imagencont {
-        margin: 10px 30px ;
-        height: 50%;
+    .imagencont img{
         display: flex;
-        flex-direction: column;
+        width: auto;
+        width: 100%;
     }
     
     .imgenContenido {
@@ -597,7 +606,7 @@ color: red;
         width: 100%;
         align-items: center;
         justify-content: center;
-        font-size: 20px;
+
     }
     
     .cont {
@@ -609,8 +618,8 @@ color: red;
         margin: 10px 30px ;
         height: auto;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }   
     
     .fuente{
