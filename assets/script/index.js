@@ -7,9 +7,9 @@ function firt_display(){
 			sort(categoria);//sort data of categoria with method 'bubble sort'
 			display_data(categoria, true);// display 6 news and button (if out database has more news)
 			display_choose(categoria);//highlight  category
-			document.querySelector("main").style.display = 'none';
+			document.querySelector("section").style.display = 'none';
 			} else {
-				document.querySelector("main").style.display = 'none';
+				document.querySelector("section").style.display = 'none';
 				secondisplay();
 			 }
 	
