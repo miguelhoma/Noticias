@@ -147,123 +147,14 @@ function secondisplay(){
 	console.log("noticia" + noticiasIdIndex); 
 }
 
-
-function  noticiasAleatoriasDelIndex(){
-
-    noticiasAleatorias = `<article class="firstnews">\
-            <div class="outstanding_one">\
-                <img class="img_one imagenIndex" src="${urlImagen}" alt="${alt}">\
-                <div class="text_one">\
-                    <a href="index.html?id=${newsID}">\
-                        <div class="title_one tituloIndex">\
-                            <p1>${titulo}</p1>\
-                        </div>\
-                    
-                        <div class="subtitle_one subtituloIndex">\
-                            <p2>${subtitulo}</p2>\
-                        </div>\
-                        <div class="subtitle parrafoIndex">\
-                            <p2></p2>\
-                        </div>\
-                    </a>\
-                </div>\
-            </div>\
-            <div class="box_one">\
-                <div class="outstanding_two boxOneNot">\
-                    <img class="img_two imgBoxOne imagenIndex" src="${urlImagen}" alt="${alt}">\
-                    <div class="text_two">\
-                        <a href="index.html?id=${newsID}">\
-                            <div class="title titleBoxOne tituloIndex">\
-                                <p1>${titulo}</p1>\
-                            </div>\
-                            <div class="subtitle subtitleBoxOne subtituloIndex">\
-                                <p2>${subtitulo}</p2>\
-                            </div>\
-                        </a>\
-                    </div>\
-                </div>\
-                <div class="outstanding_three boxOneNot">\
-                    <img class="img_three imgBoxOne imagenIndex" src="${urlImagen}" alt="${alt}">\
-                    <div class="text_three">\
-                        <a href="index.html?id=${newsID}">\
-                            <div class="title titleBoxOne tituloIndex">\
-                                <p1>${titulo}</p1>\
-                            </div>\
-                            <div class="subtitle subtitleBoxOne subtituloIndex">\
-                                <p2>${subtitulo}</p2>\
-                            </div>\
-                        </a>\
-                    </div>\
-                </div>\
-            </div>\
-        </article>\
-        <article class="box_two">\
-            <div class="outstanding_four">\
-                <img class="img_four imgBoxTwo imagenIndex" src="${urlImagen}" alt="${alt}">\
-                <div class="four">\
-                    <a href="index.html?id=${newsID}">\
-                    <div class="title titleBoxTwo tituloIndex">\
-                        <p1>${titulo}</p1>\
-                    </div>\
-                    <div class="subtitle subtitleBoxTwo subtituloIndex">
-                        <p2>${subtitulo}</p2>\
-                    </div>\
-                    </a>\
-                </div>\
-            </div>\
-            <div class="outstanding_four">\
-                <img class="img_four imgBoxTwo imagenIndex" src="${urlImagen}" alt="${alt}">\
-                <div class="four">\
-                    <a href="index.html?id=${newsID}">\
-                    <div class="title titleBoxTwo  tituloIndex">\
-                        <p1>${titulo}</p1>\
-                    </div>\
-                    <div class="subtitle subtitleBoxTwo  subtituloIndex">\
-                        <p2>${subtitulo}</p2>\
-                    </div>\
-                    </a>\
-                </div>\
-            </div>\
-            <div class="outstanding_four">\
-                <img class="img_four imgBoxTwo imagenIndex" src=" ${urlImagen}" alt="${alt}">\
-                <div class="four">\
-                    <a href="index.html?id=${newsID}">\
-                    <div class="title titleBoxTwo tituloIndex">\
-                        <p1>${titulo}</p1>\
-                    </div>\
-                    <div class="subtitle subtitleBoxTwo subtituloIndex">\
-                        <p2>${subtitulo}</p2>\
-                    </div>\
-                    </a>\
-                </div>\
-            </div>\
-        </article>` 
-    return noticiasAleatorias;
-}
-
-function noticiasPrueba(){
-    noticiasAleatorias = '';
-    
-    for (let i = 0; i < 6 ; i++) {
-        titulo = noticias_json[i]["titulo"];
-        subtitulo = noticias_json[i]["subtitulo"];
-        urlImagen = noticias_json[i]["urlImagen"];
-        newsID = noticias_json[i]["newsID"];
-        alt = noticias_json[i]["alt"];
-        noticiasAleatorias = noticiasAleatoriasDelIndex()
-    }
-    document.querySelector("main").innerHTML = noticiasAleatorias;
-}
-
 function indexScript(){
-	noticiasPrueba();
     for (let nA = 0, nB = 15; nA < 6 & nB < 112; nA++, nB+=8){
-        document.getElementsByClassName("tituloIndex")[nA].innerHTML = noticias_json[nB]["titulo"];
-        document.getElementsByClassName("subtituloIndex")[nA].innerHTML = noticias_json[nB]["subtitulo"];
-        document.getElementsByClassName("imagenIndex")[nA].src = noticias_json[nB]["urlImagen"];
+        document.getElementsByClassName("newsTitleIndex")[nA].innerHTML = noticias_json[nB]["titulo"];
+        document.getElementsByClassName("newsSubtitleIndex")[nA].innerHTML = noticias_json[nB]["subtitulo"];
+        document.getElementsByClassName("newsImageIndex")[nA].src = noticias_json[nB]["urlImagen"];
+        document.getElementsByClassName("newsLinkIndex")[nA].href= "index.html?id="+ noticias_json[nB]["newsID"]
     }
     
-    document.getElementsByClassName("parrafoIndex")[0].innerHTML = noticias_json[15]["contNoticia"]
 }
 
 indexScript();
