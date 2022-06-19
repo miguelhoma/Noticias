@@ -157,4 +157,3 @@ function indexScript(){
     
 }
 
-indexScript();
