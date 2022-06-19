@@ -507,7 +507,7 @@ color: red;
     background-color: rgba(122, 122, 122, 0.3);
 }
 
-.intereses {
+/* .intereses {
     background: rgb(0, 140, 255);
     height: 200px;
     display: flex;
@@ -538,7 +538,7 @@ color: red;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 
 
@@ -679,9 +679,6 @@ color: red;
 }
 
 
-
-
-
 .linea1 {
     border-top: 1px solid black;
     height: 2px;
@@ -697,7 +694,6 @@ a:visited, a {
  .nombreDeCategoria a:link, .nombreDeCategoria a:visited {
     color: red;
 }
-
 
 
 #ver_mas{
