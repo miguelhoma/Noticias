@@ -293,11 +293,13 @@ header label:hover {
 .upperBoxRightNewsIndex .newsNameIndex{
     width: 50%;
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
+
     .indexPage, .newsNameIndex {
         display: flex;
         flex-direction: column;
-    }
+    } 
 
    
     .upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
@@ -307,11 +309,18 @@ header label:hover {
         align-items: center;
         margin-top: 1%;
 
+    } 
+ 
+    .upperBoxIndex, .lowerBoxIndex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
    
     .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
         width: 70%;
     }
+    
 
     .lowerBoxIndex .newsNameIndex{
         width: 210%;
@@ -340,6 +349,12 @@ header label:hover {
         font-weight: bold;
         margin-top: 2%;
     }
+
+    .newsTitleIndex:hover{
+        font-weight: bold;
+        margin-top: 2%;
+        color: red;
+    }
     .newsSubtitleIndex{
         font-weight: 400;
     }
@@ -348,7 +363,7 @@ header label:hover {
         font-size: 15px;
     }
 
-    
+     
 
 }
 
@@ -367,7 +382,7 @@ header label:hover {
     }
    
     .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
-        width: 50%;
+        width: 80%;
     }
 
     .lowerBoxIndex .newsNameIndex{
@@ -375,7 +390,7 @@ header label:hover {
     }
 
     .lowerBoxIndex .newsBoxIndex{
-        width: 33%;
+        width: 55%;
     }
     
     .upperBoxRightNewsIndex .newsBoxIndex{
@@ -396,6 +411,12 @@ header label:hover {
     .newsTitleIndex{
         font-weight: bold;
         margin-top: 2%;
+    }
+
+    .newsTitleIndex:hover{
+        font-weight: bold;
+        margin-top: 2%;
+        color: red;
     }
     .newsSubtitleIndex{
         font-weight: 400;
