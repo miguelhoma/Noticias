@@ -289,22 +289,23 @@ header label:hover {
         display: flex;
         flex-direction: column;
     }
-    
+
+   
     .upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 1%;
-        background-color: aqua;
+
     }
    
     .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
-        width: 50%;
+        width: 70%;
     }
 
     .lowerBoxIndex .newsNameIndex{
-        width: 150%;
+        width: 210%;
     }
 
     .lowerBoxIndex .newsBoxIndex{
@@ -321,7 +322,7 @@ header label:hover {
     }
 
     .lowerBoxIndex img {
-        width: 150%;
+        width: 210%;
         height: 100%;
     }
 
@@ -338,6 +339,8 @@ header label:hover {
         font-size: 15px;
     }
 
+    
+
 }
 
 @media (max-width: 390px) {
@@ -345,14 +348,13 @@ header label:hover {
         display: flex;
         flex-direction: column;
     }
-    
+
     .upperBoxIndex, .lowerBoxIndex, .newsBoxIndex{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 1%;
-        background-color: aqua;
     }
    
     .newsBoxIndex.newsOne, .upperBoxRightNewsIndex {
