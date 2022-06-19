@@ -126,7 +126,7 @@ function newsPage_to_html(news){
 					<div class="lineaDos"></div>\
 					<div class="contenidoTotal">\
 						<div class="fecha">'+news["fecha"]+'</div><div class = "autor"> Autor: '+news["autor"]+'</div><div class="nombreDeCategoria"><a href="index.html?id='+news["categoria"]+'">'+news["categoria"]+'</a></div>\
-						<div class="cont"><p>'+parrafoContenidoSeparado[0]+'</p><br/><p>'+parrafoContenidoSeparado[1]+'</p><br/><p>'+parrafoContenidoSeparado[2]+'</p></div>\
+						<div class="cont"><p class="parrafoNoticia">'+parrafoContenidoSeparado[0]+'</p><br/><p class="parrafoNoticia">'+parrafoContenidoSeparado[1]+'</p><br/><p class="parrafoNoticia">'+parrafoContenidoSeparado[2]+'</p></div>\
 						<div class="fuente"><a href="'+news["urlNoticia"]+' target = "_blank"><div class="cont3">Origen</div></a></div>\
 					</div>\
 				</section>';
