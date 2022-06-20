@@ -1,15 +1,17 @@
 let noticias_json = noticias;
 
 function firt_display() {
+  // отображает все новости из категории или отдельную новость (зависит от if)
   categoria = GetParam(); //take name of category from window url
   if (isNaN(categoria) && window.location.href.includes("?id=")) {
-    sort(categoria); //sort data of categoria with method 'bubble sort'
-    display_data(categoria, true); // display 6 news and button (if out database has more news)
+    // if после = буквы, то отображаем новости из категории. А если только цифры то отделную новость
+    sort(categoria); //sort data of categoria with method 'bubble sort' новость по дате методом бульбашка
+    display_data(categoria); // display 6 news and button (if out database has more news)
     display_choose(categoria); //highlight  category
-    document.querySelector("section").style.display = "none";
+    document.querySelector("section").style.display = "none"; //на странице категории делает невидимым дивы прописаны в html для главной страницы, а вместо этого
   } else {
-    document.querySelector("section").style.display = "none";
-    secondisplay();
+    document.querySelector("section").style.display = "none"; // на странице с отдельной новостьюделает невидимым дивы прописаны в html для главной страницы, а вместо этого
+    secondisplay(); //отображение отдельной новости
   }
 }
 
@@ -29,6 +31,7 @@ function GetParam() {
 }
 
 function sort(categoria) {
+  //sort data of categoria with method 'bubble sort' новость по дате методом бульбашка
   for (var i = 0; i < noticias_json.length; i++) {
     for (var j = 0; j < noticias_json.length; j++) {
       if (
@@ -43,13 +46,10 @@ function sort(categoria) {
       }
     }
   }
-  for (var i = 0; i < noticias_json.length; i++) {
-    if (noticias_json[i]["categoria"] == categoria) {
-    }
-  }
 }
 
 function display_data(categoria) {
+  // display 6 news and button (if out database has more news)
   let news_html = ""; //  text for news and button
   let index = map.get(categoria); // array index which we stopped
   let amount = 0; // amount of added news
@@ -77,6 +77,7 @@ function display_data(categoria) {
 }
 
 function news_to_HTML(news) {
+  //все новости из категории
   let answer =
     '<div class="imagencConCategory">\
 					<img class="newsImg" src="' +
@@ -107,6 +108,7 @@ function add_button() {
 }
 
 function display_choose(categoria) {
+  //меняем подсветка серым для категории когда мы на странице категории
   let button = document.getElementById(categoria);
   button.style.backgroundColor = "rgb(188,188,188)";
 }
@@ -119,6 +121,7 @@ function on_button_clicked() {
 
 /* función para mostrar noticia con click desde la página de categoria */
 function newsPage_to_html(news) {
+  // отображает новость при клике на неё
   parrafoContenidoSeparado = news["contNoticia"].split("\\n");
 
   newsPage =
@@ -165,14 +168,16 @@ function newsPage_to_html(news) {
 }
 
 function displayNewsData(noticiasIdIndex) {
-  let noticiaHtml = "";
-  noticiaHtml += newsPage_to_html(noticias_json[noticiasIdIndex - 100]);
-  document.querySelector("content").innerHTML = noticiaHtml;
+  //
+  let noticiaHtml = ""; // новость которая будет добавлена
+  noticiaHtml += newsPage_to_html(noticias_json[noticiasIdIndex - 100]); //сюда добавляется див с новостью из функции newsPage_to_html
+  document.querySelector("content").innerHTML = noticiaHtml; // добавляем текст новости в html страницу
 }
 
 function secondisplay() {
+  //для отдельной новости
   //noticias_json.sort(function(a,b){return a.newsID - b.newsID});
-  noticiasIdIndex = GetParam();
+  noticiasIdIndex = GetParam(); // достает id новости из url
   displayNewsData(noticiasIdIndex);
   console.log("noticia" + noticiasIdIndex);
 }
